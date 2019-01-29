@@ -7,6 +7,7 @@ target 'mosque-gazeteer' do
 
   # Pods for mosque-gazeteer
 
+  pod 'Firebase/Core'
   pod 'Firebase/Database'
 
   target 'mosque-gazeteerTests' do

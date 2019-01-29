@@ -15,6 +15,9 @@
 		FEAF84D5220006CA002E49DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D4220006CA002E49DA /* Assets.xcassets */; };
 		FEAF84D8220006CA002E49DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D6220006CA002E49DA /* LaunchScreen.storyboard */; };
 		FEAF84E3220006CA002E49DA /* mosque_gazeteerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84E2220006CA002E49DA /* mosque_gazeteerTests.swift */; };
+		FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84EE22000C22002E49DA /* ApplicationService.swift */; };
+		FEAF84F122000C6E002E49DA /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84F022000C6E002E49DA /* FirebaseService.swift */; };
+		FEAF84F522001200002E49DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84F422001200002E49DA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		FEAF84DE220006CA002E49DA /* mosque-gazeteerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mosque-gazeteerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF84E2220006CA002E49DA /* mosque_gazeteerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mosque_gazeteerTests.swift; sourceTree = "<group>"; };
 		FEAF84E4220006CA002E49DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEAF84EE22000C22002E49DA /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		FEAF84F022000C6E002E49DA /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		FEAF84F422001200002E49DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,8 @@
 		FEAF84CC220006C8002E49DA /* mosque-gazeteer */ = {
 			isa = PBXGroup;
 			children = (
+				FEAF84F422001200002E49DA /* GoogleService-Info.plist */,
+				FEAF84ED22000BDA002E49DA /* App Delegate Services */,
 				FEAF84CD220006C8002E49DA /* AppDelegate.swift */,
 				FEAF84CF220006C8002E49DA /* ViewController.swift */,
 				FEAF84D1220006C8002E49DA /* Main.storyboard */,
@@ -126,6 +134,15 @@
 				FEAF84E4220006CA002E49DA /* Info.plist */,
 			);
 			path = "mosque-gazeteerTests";
+			sourceTree = "<group>";
+		};
+		FEAF84ED22000BDA002E49DA /* App Delegate Services */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF84EE22000C22002E49DA /* ApplicationService.swift */,
+				FEAF84F022000C6E002E49DA /* FirebaseService.swift */,
+			);
+			path = "App Delegate Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAF84D8220006CA002E49DA /* LaunchScreen.storyboard in Resources */,
+				FEAF84F522001200002E49DA /* GoogleService-Info.plist in Resources */,
 				FEAF84D5220006CA002E49DA /* Assets.xcassets in Resources */,
 				FEAF84D3220006C8002E49DA /* Main.storyboard in Resources */,
 			);
@@ -261,6 +279,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -268,6 +287,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -304,6 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAF84D0220006C8002E49DA /* ViewController.swift in Sources */,
+				FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */,
+				FEAF84F122000C6E002E49DA /* FirebaseService.swift in Sources */,
 				FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
