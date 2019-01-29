@@ -7,9 +7,11 @@ target 'mosque-gazeteer' do
 
   # Pods for mosque-gazeteer
 
+  pod 'Firebase/Core'
+
   target 'mosque-gazeteerTests' do
     inherit! :search_paths
-    # Pods for testing
+    
   end
 
 end
