@@ -1,6 +1,0 @@
-framework module Pods_mosque_gazeteerTests {
-  umbrella header "Pods-mosque-gazeteerTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
