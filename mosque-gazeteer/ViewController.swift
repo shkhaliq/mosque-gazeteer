@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import CodableFirebase
 
 class ViewController: UIViewController {
 
+    var ref: DatabaseReference?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ref = Database.database().reference()
+        ref?.child("mosques").observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let value = snapshot.value else { return }
+            do {
+                let mosques = try FirebaseDecoder().decode([Mosque].self, from: value)
+                print(mosques[0].salahs[0].iqamah)
+            } catch let error {
+                print(error)
+            }
+        })
     }
 
 

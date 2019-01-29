@@ -18,6 +18,7 @@
 		FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84EE22000C22002E49DA /* ApplicationService.swift */; };
 		FEAF84F122000C6E002E49DA /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84F022000C6E002E49DA /* FirebaseService.swift */; };
 		FEAF84F522001200002E49DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84F422001200002E49DA /* GoogleService-Info.plist */; };
+		FEAF84F8220015B2002E49DA /* Mosque.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84F7220015B2002E49DA /* Mosque.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		FEAF84EE22000C22002E49DA /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		FEAF84F022000C6E002E49DA /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		FEAF84F422001200002E49DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FEAF84F7220015B2002E49DA /* Mosque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mosque.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		FEAF84CC220006C8002E49DA /* mosque-gazeteer */ = {
 			isa = PBXGroup;
 			children = (
+				FEAF84F62200157E002E49DA /* DataKit Models */,
 				FEAF84F422001200002E49DA /* GoogleService-Info.plist */,
 				FEAF84ED22000BDA002E49DA /* App Delegate Services */,
 				FEAF84CD220006C8002E49DA /* AppDelegate.swift */,
@@ -143,6 +146,14 @@
 				FEAF84F022000C6E002E49DA /* FirebaseService.swift */,
 			);
 			path = "App Delegate Services";
+			sourceTree = "<group>";
+		};
+		FEAF84F62200157E002E49DA /* DataKit Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF84F7220015B2002E49DA /* Mosque.swift */,
+			);
+			path = "DataKit Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -285,6 +297,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -326,6 +339,7 @@
 				FEAF84D0220006C8002E49DA /* ViewController.swift in Sources */,
 				FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */,
 				FEAF84F122000C6E002E49DA /* FirebaseService.swift in Sources */,
+				FEAF84F8220015B2002E49DA /* Mosque.swift in Sources */,
 				FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
