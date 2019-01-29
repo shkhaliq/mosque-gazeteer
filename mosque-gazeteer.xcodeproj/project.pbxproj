@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4490AE728F704474B8FF6485 /* Pods_mosque_gazeteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6154BA167A3EAFB1B4648EA2 /* Pods_mosque_gazeteer.framework */; };
+		4CC39206EDC60374867C321C /* Pods_mosque_gazeteerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BF9D85E3C0C9E262E37C6 /* Pods_mosque_gazeteerTests.framework */; };
 		FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84CD220006C8002E49DA /* AppDelegate.swift */; };
 		FEAF84D0220006C8002E49DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84CF220006C8002E49DA /* ViewController.swift */; };
 		FEAF84D3220006C8002E49DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D1220006C8002E49DA /* Main.storyboard */; };
@@ -26,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3ABE663C4772990CBD9C3412 /* Pods-mosque-gazeteer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mosque-gazeteer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer.debug.xcconfig"; sourceTree = "<group>"; };
+		6154BA167A3EAFB1B4648EA2 /* Pods_mosque_gazeteer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mosque_gazeteer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B0122EB927A604512A10809 /* Pods-mosque-gazeteerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mosque-gazeteerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mosque-gazeteerTests/Pods-mosque-gazeteerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C86BF9D85E3C0C9E262E37C6 /* Pods_mosque_gazeteerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mosque_gazeteerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF93AAD030D0574B9951449 /* Pods-mosque-gazeteerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mosque-gazeteerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mosque-gazeteerTests/Pods-mosque-gazeteerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F95C5189D4CCF06C8347F2FF /* Pods-mosque-gazeteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mosque-gazeteer.release.xcconfig"; path = "Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer.release.xcconfig"; sourceTree = "<group>"; };
 		FEAF84CA220006C8002E49DA /* mosque-gazeteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mosque-gazeteer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF84CD220006C8002E49DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAF84CF220006C8002E49DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4490AE728F704474B8FF6485 /* Pods_mosque_gazeteer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC39206EDC60374867C321C /* Pods_mosque_gazeteerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		802D3EFC942EDF2C3E75A2BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ABE663C4772990CBD9C3412 /* Pods-mosque-gazeteer.debug.xcconfig */,
+				F95C5189D4CCF06C8347F2FF /* Pods-mosque-gazeteer.release.xcconfig */,
+				CDF93AAD030D0574B9951449 /* Pods-mosque-gazeteerTests.debug.xcconfig */,
+				6B0122EB927A604512A10809 /* Pods-mosque-gazeteerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4957D8B629113B4C6F13247 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6154BA167A3EAFB1B4648EA2 /* Pods_mosque_gazeteer.framework */,
+				C86BF9D85E3C0C9E262E37C6 /* Pods_mosque_gazeteerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FEAF84C1220006C8002E49DA = {
 			isa = PBXGroup;
 			children = (
 				FEAF84CC220006C8002E49DA /* mosque-gazeteer */,
 				FEAF84E1220006CA002E49DA /* mosque-gazeteerTests */,
 				FEAF84CB220006C8002E49DA /* Products */,
+				802D3EFC942EDF2C3E75A2BE /* Pods */,
+				A4957D8B629113B4C6F13247 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEAF84E7220006CA002E49DA /* Build configuration list for PBXNativeTarget "mosque-gazeteer" */;
 			buildPhases = (
+				0C505E152D052100EE3FDF1A /* [CP] Check Pods Manifest.lock */,
 				FEAF84C6220006C8002E49DA /* Sources */,
 				FEAF84C7220006C8002E49DA /* Frameworks */,
 				FEAF84C8220006C8002E49DA /* Resources */,
@@ -120,6 +153,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEAF84EA220006CA002E49DA /* Build configuration list for PBXNativeTarget "mosque-gazeteerTests" */;
 			buildPhases = (
+				B9102CBEB92BE323BF4BBA31 /* [CP] Check Pods Manifest.lock */,
 				FEAF84DA220006CA002E49DA /* Sources */,
 				FEAF84DB220006CA002E49DA /* Frameworks */,
 				FEAF84DC220006CA002E49DA /* Resources */,
@@ -191,6 +225,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C505E152D052100EE3FDF1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mosque-gazeteer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9102CBEB92BE323BF4BBA31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mosque-gazeteerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FEAF84C6220006C8002E49DA /* Sources */ = {
@@ -358,6 +439,7 @@
 		};
 		FEAF84E8220006CA002E49DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABE663C4772990CBD9C3412 /* Pods-mosque-gazeteer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +458,7 @@
 		};
 		FEAF84E9220006CA002E49DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F95C5189D4CCF06C8347F2FF /* Pods-mosque-gazeteer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +477,7 @@
 		};
 		FEAF84EB220006CA002E49DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF93AAD030D0574B9951449 /* Pods-mosque-gazeteerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +499,7 @@
 		};
 		FEAF84EC220006CA002E49DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B0122EB927A604512A10809 /* Pods-mosque-gazeteerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
