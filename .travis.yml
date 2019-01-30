@@ -5,6 +5,7 @@ xcode_workspace: mosque-gazeteer.xcworkspace
 xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone XR
 
 before_install:
+- gem install bundler
 - pod repo update
 
 script:
