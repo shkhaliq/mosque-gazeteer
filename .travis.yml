@@ -6,3 +6,6 @@ xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone XR
 
 before_install:
 - pod repo update
+
+script:
+  - bundle exec fastlane pr_build
