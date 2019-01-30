@@ -1,0 +1,4 @@
+language: swift
+xcode_project: mosque-gazeteer.xcodeproj # path to your xcodeproj folder
+xcode_scheme: mosque-gazeteerTests
+xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone XR
