@@ -10,7 +10,7 @@ import Foundation
 
 class Mosque: Codable {
     let name: String
-    let address: String
+    let address: String?
     let publiclyAccessible: Bool
     let salahs: [Salah]
 }
