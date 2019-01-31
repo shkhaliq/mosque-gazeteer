@@ -18,7 +18,7 @@ class ApplicationLaunchService: NSObject, ApplicationService {
         coordinator = LaunchCoordinator()
         coordinator?.start(animated: true)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = coordinator?.navigationController
+        window?.rootViewController = coordinator?.tabBarController
         window?.makeKeyAndVisible()
         return true
     }

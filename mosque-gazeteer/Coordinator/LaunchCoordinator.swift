@@ -10,17 +10,17 @@ import UIKit
 
 class LaunchCoordinator {
 
-    var navigationController: UINavigationController?
-    private let mosquesListViewController: MosquesListViewController
+    var tabBarController: RootTabBarController?
+    private let tabBarProviders: [TabBarControllerProvider]
 
     init() {
-        let dataSource = MosquesListDataSource()
-        self.mosquesListViewController = MosquesListViewController(dataSource: dataSource)
+        self.tabBarProviders = [
+            MosquesTabBarProvider(),
+            SettingsTabProvider(),
+        ]
     }
 
     func start(animated: Bool) {
-        navigationController = UINavigationController(rootViewController: mosquesListViewController)
-
-        mosquesListViewController.navigationItem.title = NSLocalizedString("Mosques", comment: "")
+        tabBarController = RootTabBarController(tabBarProviders)
     }
 }
