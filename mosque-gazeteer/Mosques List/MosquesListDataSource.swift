@@ -19,6 +19,7 @@ class MosquesListDataSource {
                 return
             }
             self.items = mosques.map(MosqueViewModel.init)
+            completion()
         }
     }
 

@@ -13,15 +13,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var coordinator: LaunchCoordinator?
+
     var services: [ApplicationService] {
-        return [FirebaseService()]
+        return [
+            ApplicationLaunchService(),
+            FirebaseService(),
+        ]
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        var result = false
         for service in services {
-            _ = service.application?(application, didFinishLaunchingWithOptions: launchOptions)
+            if service.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? false {
+                result = true
+            }
+            if let myWindow = service.window {
+                window = myWindow
+            }
         }
-        return true
+        return result
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

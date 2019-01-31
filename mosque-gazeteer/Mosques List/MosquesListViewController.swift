@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MosquesListViewController: UITableViewController, UITableViewDataSource {
+class MosquesListViewController: UITableViewController {
 
     private let dataSource: MosquesListDataSource
 
@@ -25,6 +25,10 @@ class MosquesListViewController: UITableViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self)
+        dataSource.load {
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - UITableViewDataSource
@@ -33,8 +37,11 @@ class MosquesListViewController: UITableViewController, UITableViewDataSource {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let item = dataSource.items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(UITableViewCell.self, for: indexPath)
+        // Will write a custom cell
+        cell.textLabel?.text = item.name
+        return cell
     }
 
 

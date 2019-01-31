@@ -10,7 +10,6 @@
 		4490AE728F704474B8FF6485 /* Pods_mosque_gazeteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6154BA167A3EAFB1B4648EA2 /* Pods_mosque_gazeteer.framework */; };
 		4CC39206EDC60374867C321C /* Pods_mosque_gazeteerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BF9D85E3C0C9E262E37C6 /* Pods_mosque_gazeteerTests.framework */; };
 		FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84CD220006C8002E49DA /* AppDelegate.swift */; };
-		FEAF84D0220006C8002E49DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84CF220006C8002E49DA /* ViewController.swift */; };
 		FEAF84D5220006CA002E49DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D4220006CA002E49DA /* Assets.xcassets */; };
 		FEAF84D8220006CA002E49DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D6220006CA002E49DA /* LaunchScreen.storyboard */; };
 		FEAF84E3220006CA002E49DA /* mosque_gazeteerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84E2220006CA002E49DA /* mosque_gazeteerTests.swift */; };
@@ -18,12 +17,14 @@
 		FEAF84F122000C6E002E49DA /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84F022000C6E002E49DA /* FirebaseService.swift */; };
 		FEAF84F522001200002E49DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84F422001200002E49DA /* GoogleService-Info.plist */; };
 		FEAF84F8220015B2002E49DA /* Mosque.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84F7220015B2002E49DA /* Mosque.swift */; };
-		FEAF84FA2201E7A0002E49DA /* ApplicationLaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84F92201E7A0002E49DA /* ApplicationLaunchService.swift */; };
 		FEAF84FD2201E912002E49DA /* MosqueDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84FC2201E912002E49DA /* MosqueDataFetcher.swift */; };
 		FEAF85002201ED23002E49DA /* MosquesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84FF2201ED23002E49DA /* MosquesListViewController.swift */; };
 		FEAF85022201ED99002E49DA /* MosquesListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF85012201ED99002E49DA /* MosquesListDataSource.swift */; };
 		FEAF85042201EE2C002E49DA /* MosqueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF85032201EE2C002E49DA /* MosqueViewModel.swift */; };
 		FEAF85062201EF0D002E49DA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF85052201EF0D002E49DA /* ListViewModel.swift */; };
+		FEAF850922029F38002E49DA /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF850822029F38002E49DA /* UITableView+Register.swift */; };
+		FEAF850E2202A05D002E49DA /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF850D2202A05D002E49DA /* LaunchCoordinator.swift */; };
+		FEAF85102202A746002E49DA /* ApplicationLaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF850F2202A746002E49DA /* ApplicationLaunchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		F95C5189D4CCF06C8347F2FF /* Pods-mosque-gazeteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mosque-gazeteer.release.xcconfig"; path = "Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer.release.xcconfig"; sourceTree = "<group>"; };
 		FEAF84CA220006C8002E49DA /* mosque-gazeteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mosque-gazeteer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF84CD220006C8002E49DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FEAF84CF220006C8002E49DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FEAF84D4220006CA002E49DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEAF84D7220006CA002E49DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEAF84D9220006CA002E49DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,12 +56,14 @@
 		FEAF84F022000C6E002E49DA /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		FEAF84F422001200002E49DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEAF84F7220015B2002E49DA /* Mosque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mosque.swift; sourceTree = "<group>"; };
-		FEAF84F92201E7A0002E49DA /* ApplicationLaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationLaunchService.swift; sourceTree = "<group>"; };
 		FEAF84FC2201E912002E49DA /* MosqueDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueDataFetcher.swift; sourceTree = "<group>"; };
 		FEAF84FF2201ED23002E49DA /* MosquesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosquesListViewController.swift; sourceTree = "<group>"; };
 		FEAF85012201ED99002E49DA /* MosquesListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosquesListDataSource.swift; sourceTree = "<group>"; };
 		FEAF85032201EE2C002E49DA /* MosqueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueViewModel.swift; sourceTree = "<group>"; };
 		FEAF85052201EF0D002E49DA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		FEAF850822029F38002E49DA /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		FEAF850D2202A05D002E49DA /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
+		FEAF850F2202A746002E49DA /* ApplicationLaunchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationLaunchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,13 +129,14 @@
 		FEAF84CC220006C8002E49DA /* mosque-gazeteer */ = {
 			isa = PBXGroup;
 			children = (
+				FEAF850A22029FDB002E49DA /* Coordinator */,
+				FEAF850722029F26002E49DA /* Extensions */,
 				FEAF84FE2201ECFF002E49DA /* Mosques List */,
 				FEAF84ED22000BDA002E49DA /* App Delegate Services */,
 				FEAF84FB2201E8D3002E49DA /* Data Client */,
 				FEAF84F62200157E002E49DA /* DataKit Models */,
 				FEAF84F422001200002E49DA /* GoogleService-Info.plist */,
 				FEAF84CD220006C8002E49DA /* AppDelegate.swift */,
-				FEAF84CF220006C8002E49DA /* ViewController.swift */,
 				FEAF84D4220006CA002E49DA /* Assets.xcassets */,
 				FEAF84D6220006CA002E49DA /* LaunchScreen.storyboard */,
 				FEAF84D9220006CA002E49DA /* Info.plist */,
@@ -153,9 +156,9 @@
 		FEAF84ED22000BDA002E49DA /* App Delegate Services */ = {
 			isa = PBXGroup;
 			children = (
+				FEAF850F2202A746002E49DA /* ApplicationLaunchService.swift */,
 				FEAF84EE22000C22002E49DA /* ApplicationService.swift */,
 				FEAF84F022000C6E002E49DA /* FirebaseService.swift */,
-				FEAF84F92201E7A0002E49DA /* ApplicationLaunchService.swift */,
 			);
 			path = "App Delegate Services";
 			sourceTree = "<group>";
@@ -185,6 +188,22 @@
 				FEAF85052201EF0D002E49DA /* ListViewModel.swift */,
 			);
 			path = "Mosques List";
+			sourceTree = "<group>";
+		};
+		FEAF850722029F26002E49DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF850822029F38002E49DA /* UITableView+Register.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FEAF850A22029FDB002E49DA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF850D2202A05D002E49DA /* LaunchCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,12 +385,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAF850E2202A05D002E49DA /* LaunchCoordinator.swift in Sources */,
+				FEAF85102202A746002E49DA /* ApplicationLaunchService.swift in Sources */,
 				FEAF84FD2201E912002E49DA /* MosqueDataFetcher.swift in Sources */,
-				FEAF84D0220006C8002E49DA /* ViewController.swift in Sources */,
 				FEAF85002201ED23002E49DA /* MosquesListViewController.swift in Sources */,
-				FEAF84FA2201E7A0002E49DA /* ApplicationLaunchService.swift in Sources */,
 				FEAF85042201EE2C002E49DA /* MosqueViewModel.swift in Sources */,
 				FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */,
+				FEAF850922029F38002E49DA /* UITableView+Register.swift in Sources */,
 				FEAF84F122000C6E002E49DA /* FirebaseService.swift in Sources */,
 				FEAF84F8220015B2002E49DA /* Mosque.swift in Sources */,
 				FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */,
