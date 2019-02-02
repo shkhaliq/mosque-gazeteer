@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
     }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         var result = false
         for service in services {
             if service.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? false {
@@ -64,7 +65,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             service.applicationWillTerminate?(application)
         }
     }
-
-
 }
-

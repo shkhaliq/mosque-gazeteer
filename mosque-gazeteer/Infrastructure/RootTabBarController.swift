@@ -21,7 +21,11 @@ class RootTabBarController: UITabBarController {
 
         self.viewControllers = providers.map {
             let navigationController = UINavigationController(rootViewController: $0.viewController)
-            navigationController.tabBarItem = UITabBarItem(title: $0.tabBarTitle, image: $0.tabBarImage, selectedImage: $0.tabBarImage)
+            navigationController.tabBarItem = UITabBarItem(
+                title: $0.tabBarTitle,
+                image: $0.tabBarImage,
+                selectedImage: $0.tabBarImage
+            )
             return navigationController
         }
     }
@@ -30,5 +34,3 @@ class RootTabBarController: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
