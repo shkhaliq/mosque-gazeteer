@@ -16,7 +16,7 @@ class LaunchCoordinator {
     init() {
         self.tabBarProviders = [
             MosquesTabBarProvider(),
-            SettingsTabProvider(),
+            FeedbackTabProvider(),
         ]
     }
 
