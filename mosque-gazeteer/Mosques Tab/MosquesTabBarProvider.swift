@@ -14,7 +14,7 @@ class MosquesTabBarProvider: TabBarControllerProvider {
     }
 
     var tabBarImage: UIImage? {
-        return nil
+        return UIImage(named: "takbir")
     }
 
     var viewController: UIViewController {

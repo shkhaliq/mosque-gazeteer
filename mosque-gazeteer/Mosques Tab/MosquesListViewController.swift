@@ -29,6 +29,9 @@ class MosquesListViewController: UITableViewController {
         dataSource.load {
             self.tableView.reloadData()
         }
+
+        title = NSLocalizedString("Mosques", comment: "")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
     }
 
     // MARK: - UITableViewDataSource

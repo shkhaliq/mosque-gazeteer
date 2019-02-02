@@ -8,17 +8,17 @@
 
 import UIKit
 
-class SettingsTabProvider: TabBarControllerProvider {
+class FeedbackTabProvider: TabBarControllerProvider {
     var tabBarTitle: String {
-        return "Settings"
+        return "Feedback"
     }
 
     var tabBarImage: UIImage? {
-        return nil
+        return UIImage(named: "feedback")
     }
 
     var viewController: UIViewController {
-        return UIViewController()
+        return FeedbackViewController()
     }
 
 
