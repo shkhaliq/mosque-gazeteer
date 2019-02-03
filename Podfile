@@ -10,6 +10,7 @@ target 'mosque-gazeteer' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'CodableFirebase'
+  pod 'SwiftLint'
   
   target 'mosque-gazeteerTests' do
     inherit! :search_paths
