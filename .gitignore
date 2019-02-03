@@ -1,3 +1,6 @@
 *xcuserdata*
 Pods/
 */xcshareddata*
+*report.xml
+fastlane/test_output/*
+
