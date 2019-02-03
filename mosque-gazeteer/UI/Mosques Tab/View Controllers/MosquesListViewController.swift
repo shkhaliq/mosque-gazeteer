@@ -47,5 +47,10 @@ class MosquesListViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = dataSource.items[indexPath.row]
 
+        let viewController = PrayersListViewController(items: item.salahs)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
