@@ -14,7 +14,7 @@ target 'mosque-gazeteer' do
   
   target 'mosque-gazeteerTests' do
     inherit! :search_paths
-    
+    pod 'SnapshotTesting'
   end
 
 end
