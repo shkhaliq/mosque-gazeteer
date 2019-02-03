@@ -17,6 +17,13 @@ class PrayerTimeCell: UITableViewCell {
         return label
     }()
 
+    private let timeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        return label
+    }()
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
@@ -28,14 +35,19 @@ class PrayerTimeCell: UITableViewCell {
 
     private func commonInit() {
         contentView.addSubview(prayerLabel)
+        contentView.addSubview(timeLabel)
 
         NSLayoutConstraint.activate([
             prayerLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             prayerLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+
+            timeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            timeLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             ])
     }
 
     func bindViewModel(_ viewModel: SalahViewModel) {
         prayerLabel.text = viewModel.name
+        timeLabel.text = viewModel.time
     }
 }
