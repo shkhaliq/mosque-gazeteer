@@ -112,6 +112,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE899BC522075E3C004F0996 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF84FE2201ECFF002E49DA /* Mosques Tab */,
+				FEAF85172202AFCB002E49DA /* Settings Tab */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		FEAF84C1220006C8002E49DA = {
 			isa = PBXGroup;
 			children = (
@@ -135,11 +144,10 @@
 		FEAF84CC220006C8002E49DA /* mosque-gazeteer */ = {
 			isa = PBXGroup;
 			children = (
-				FEAF85172202AFCB002E49DA /* Settings Tab */,
+				FE899BC522075E3C004F0996 /* UI */,
 				FEAF85162202AF97002E49DA /* Infrastructure */,
 				FEAF850A22029FDB002E49DA /* Coordinator */,
 				FEAF850722029F26002E49DA /* Extensions */,
-				FEAF84FE2201ECFF002E49DA /* Mosques Tab */,
 				FEAF84ED22000BDA002E49DA /* App Delegate Services */,
 				FEAF84FB2201E8D3002E49DA /* Data Client */,
 				FEAF84F62200157E002E49DA /* DataKit Models */,
