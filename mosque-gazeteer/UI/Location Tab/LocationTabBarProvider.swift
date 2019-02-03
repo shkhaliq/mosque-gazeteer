@@ -18,7 +18,7 @@ class LocationTabBarProvider: TabBarControllerProvider {
     }
 
     var viewController: UIViewController {
-        return UIViewController()
+        return LocationViewController()
     }
 
 }

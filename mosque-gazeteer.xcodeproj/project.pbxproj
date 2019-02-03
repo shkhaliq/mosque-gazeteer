@@ -14,6 +14,7 @@
 		FE899BCD220790C3004F0996 /* PrayersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE899BCC220790C3004F0996 /* PrayersListViewController.swift */; };
 		FE899BD02207A188004F0996 /* PrayerTimeCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE899BCF2207A188004F0996 /* PrayerTimeCellTests.swift */; };
 		FE899BD32207AD00004F0996 /* LocationTabBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE899BD22207AD00004F0996 /* LocationTabBarProvider.swift */; };
+		FE899BD62207AEDA004F0996 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE899BD52207AEDA004F0996 /* LocationViewController.swift */; };
 		FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84CD220006C8002E49DA /* AppDelegate.swift */; };
 		FEAF84D5220006CA002E49DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D4220006CA002E49DA /* Assets.xcassets */; };
 		FEAF84D8220006CA002E49DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D6220006CA002E49DA /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 		FE899BCC220790C3004F0996 /* PrayersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersListViewController.swift; sourceTree = "<group>"; };
 		FE899BCF2207A188004F0996 /* PrayerTimeCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeCellTests.swift; sourceTree = "<group>"; };
 		FE899BD22207AD00004F0996 /* LocationTabBarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTabBarProvider.swift; sourceTree = "<group>"; };
+		FE899BD52207AEDA004F0996 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		FEAF84CA220006C8002E49DA /* mosque-gazeteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mosque-gazeteer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF84CD220006C8002E49DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAF84D4220006CA002E49DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,9 +160,18 @@
 		FE899BD12207ACE4004F0996 /* Location Tab */ = {
 			isa = PBXGroup;
 			children = (
+				FE899BD42207AEC8004F0996 /* ViewControllers */,
 				FE899BD22207AD00004F0996 /* LocationTabBarProvider.swift */,
 			);
 			path = "Location Tab";
+			sourceTree = "<group>";
+		};
+		FE899BD42207AEC8004F0996 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE899BD52207AEDA004F0996 /* LocationViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FEAF84C1220006C8002E49DA = {
@@ -510,6 +521,7 @@
 				FEAF84FD2201E912002E49DA /* MosqueDataFetcher.swift in Sources */,
 				FEAF85002201ED23002E49DA /* MosquesListViewController.swift in Sources */,
 				FE899BCD220790C3004F0996 /* PrayersListViewController.swift in Sources */,
+				FE899BD62207AEDA004F0996 /* LocationViewController.swift in Sources */,
 				FEAF85042201EE2C002E49DA /* MosqueViewModel.swift in Sources */,
 				FEAF85152202AE4F002E49DA /* MosquesTabBarProvider.swift in Sources */,
 				FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */,
