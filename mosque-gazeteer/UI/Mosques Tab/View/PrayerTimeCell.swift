@@ -48,6 +48,6 @@ class PrayerTimeCell: UITableViewCell {
 
     func bindViewModel(_ viewModel: SalahViewModel) {
         prayerLabel.text = viewModel.name
-        timeLabel.text = viewModel.time
+        timeLabel.text = DateFormatter.localTimeFormat.string(from: viewModel.time)
     }
 }

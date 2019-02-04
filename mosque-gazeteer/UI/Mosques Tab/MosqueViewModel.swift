@@ -28,9 +28,9 @@ extension MosqueViewModel {
 
 class SalahViewModel {
     let name: String
-    let time: String
+    let time: Date
 
-    init(name: String, time: String) {
+    init(name: String, time: Date) {
         self.name = name
         self.time = time
     }

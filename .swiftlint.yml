@@ -2,5 +2,30 @@ excluded:
  - Pods/*
 disabled_rules:
  - trailing_whitespace
- - trailing_comma
  - vertical_whitespace
+
+opt_in_rules:
+  - force_unwrapping
+  - explicit_init
+  - contains_over_first_not_nil
+  - first_where
+  - overridden_super_call
+  - redundant_nil_coalescing
+  - empty_string
+  - fatal_error_message
+  - discouraged_object_literal
+  - fallthrough
+  - required_enum_case
+  - sorted_first_last
+  - unused_import
+  - unused_private_declaration
+  - yoda_condition
+  - toggle_bool
+  - compiler_protocol_init
+  - legacy_random
+  - convenience_type
+  - redundant_set_access_control
+  - prohibited_super_call
+
+trailing_comma:
+  mandatory_comma: true
