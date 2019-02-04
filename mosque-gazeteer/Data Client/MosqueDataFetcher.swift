@@ -26,7 +26,10 @@ class MosqueDataFetcher {
                     return
             }
             do {
-                let mosques = try FirebaseDecoder().decode([Mosque].self, from: value)
+                let decoder = FirebaseDecoder()
+                decoder.dateDecodingStrategy = .formatted(DateFormatter.localTimeFormat)
+                let mosques = try decoder.decode([Mosque].self, from: value)
+
                 completion(mosques, nil)
             } catch let error {
                 completion(nil, error)

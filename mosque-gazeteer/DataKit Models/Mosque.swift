@@ -16,6 +16,6 @@ class Mosque: Codable {
 }
 
 class Salah: Codable {
-    let iqamah: String
+    let iqamah: Date
     let name: String
 }

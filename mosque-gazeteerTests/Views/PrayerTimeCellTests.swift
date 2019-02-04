@@ -15,7 +15,7 @@ class PrayerTimeCellTests: XCTestCase {
         let frame = CGRect(x: 0, y: 0, width: 375, height: 52)
         let cell = PrayerTimeCell(frame: frame)
         cell.backgroundColor = UIColor.lightText
-        cell.bindViewModel(SalahViewModel(name: "Fajr", time: "6:30"))
+        cell.bindViewModel(SalahViewModel(name: "Fajr", time: DateFormatter.localTimeFormat.date(from: "6:30 AM")!))
 
         assertSnapshot(matching: cell, as: .image)
     }

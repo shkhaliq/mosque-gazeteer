@@ -1,0 +1,20 @@
+disabled_rules:
+  - function_body_length
+  - type_body_length
+  - file_length
+  - function_parameter_count
+  - statement_position
+  - vertical_whitespace
+  - trailing_whitespace
+  - trailing_newline
+  - mark
+  - identifier_name
+  - todo
+  - force_unwrapping
+  - force_cast
+  - force_try
+
+line_length: 180
+
+trailing_comma:
+  mandatory_comma: true
