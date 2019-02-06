@@ -34,6 +34,7 @@
 		FEAF85152202AE4F002E49DA /* MosquesTabBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF85142202AE4F002E49DA /* MosquesTabBarProvider.swift */; };
 		FEAF85192202AFE1002E49DA /* FeedbackTabProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF85182202AFE1002E49DA /* FeedbackTabProvider.swift */; };
 		FEAF851B2202B184002E49DA /* MosqueViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF851A2202B184002E49DA /* MosqueViewModelTests.swift */; };
+		FECF470A220AB18800DA3948 /* MosqueDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECF4709220AB18800DA3948 /* MosqueDataClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		FEAF85142202AE4F002E49DA /* MosquesTabBarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosquesTabBarProvider.swift; sourceTree = "<group>"; };
 		FEAF85182202AFE1002E49DA /* FeedbackTabProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTabProvider.swift; sourceTree = "<group>"; };
 		FEAF851A2202B184002E49DA /* MosqueViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueViewModelTests.swift; sourceTree = "<group>"; };
+		FECF4709220AB18800DA3948 /* MosqueDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueDataClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				FEAF84FC2201E912002E49DA /* MosqueDataFetcher.swift */,
+				FECF4709220AB18800DA3948 /* MosqueDataClient.swift */,
 			);
 			path = "Data Client";
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				FEAF85042201EE2C002E49DA /* MosqueViewModel.swift in Sources */,
 				FE899BD82207C8EE004F0996 /* DateFormatter+Custom.swift in Sources */,
 				FEAF85152202AE4F002E49DA /* MosquesTabBarProvider.swift in Sources */,
+				FECF470A220AB18800DA3948 /* MosqueDataClient.swift in Sources */,
 				FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */,
 				FEAF85192202AFE1002E49DA /* FeedbackTabProvider.swift in Sources */,
 				FEAF850922029F38002E49DA /* UITableView+Register.swift in Sources */,
