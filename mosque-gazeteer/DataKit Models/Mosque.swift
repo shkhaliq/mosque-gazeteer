@@ -9,10 +9,10 @@
 import Foundation
 
 class Mosque: Codable {
+    let id: Int
     let name: String
-    let address: String?
-    let publiclyAccessible: Bool
-    let salahs: [Salah]
+    let publiclyAccessible: Bool?
+    let updatedAt: Date
 }
 
 class Salah: Codable {

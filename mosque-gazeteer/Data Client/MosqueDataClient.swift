@@ -13,13 +13,13 @@ struct Endpoint {
 }
 
 extension Endpoint {
-    var url: URL? {
+    var url: URL {
         var components = URLComponents()
         components.scheme = "http"
         components.host = "localhost"
         components.port = 3000
         components.path = path
-        return components.url
+        return components.url! //s
     }
 }
 
@@ -45,21 +45,34 @@ class MosqueDataClient {
         case failure(Error?)
     }
 
-    func loadData(from endpoint: Endpoint,
-                  completionHandler: @escaping (Result) -> Void) {
-        guard let url = endpoint.url else {
-            completionHandler(.failure(NSError(domain: "dd", code: 400, userInfo: nil)))
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+    func fetchAllMosques(completionHandler: @escaping ([Mosque]?, Error?) -> Void) {
+        let task = URLSession.shared.dataTask(with: Endpoint.fetchAllMosques().url) { data, _, error in
             guard let data = data else {
-                completionHandler(.failure(error))
+                completionHandler(nil, error)
                 return
             }
 
-            completionHandler(.success(data))
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
+            do {
+                let json = try decoder.decode([Mosque].self, from: data)
+                completionHandler(json, nil)
+            } catch let error {
+                print(error)
+                completionHandler(nil, error)
+            }
+
         }
 
         task.resume()
     }
+
+
+//    func loadData(from endpoint: Endpoint,
+//                  completionHandler: @escaping (Result) -> Void) {
+//        guard let url = endpoint.url else {
+//            completionHandler(.failure(NSError(domain: "dd", code: 400, userInfo: nil)))
+//            return
+//        }
 }

@@ -20,8 +20,9 @@ class MosqueViewModel {
 
 extension MosqueViewModel {
     convenience init(_ mosque: Mosque) {
-        let salahs = mosque.salahs.map({ SalahViewModel(name: $0.name, time: $0.iqamah)})
-        self.init(name: mosque.name, salahs: salahs)
+//        let salahs = mosque.salahs.map({ SalahViewModel(name: $0.name, time: $0.iqamah)})
+//        self.init(name: mosque.name, salahs: salahs)
+        self.init(name: mosque.name, salahs: [])
     }
 }
 

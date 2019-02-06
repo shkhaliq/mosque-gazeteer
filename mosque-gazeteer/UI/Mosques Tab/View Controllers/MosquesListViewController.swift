@@ -30,9 +30,12 @@ class MosquesListViewController: UITableViewController {
             self.tableView.reloadData()
         }
 
-        MosqueDataClient().loadData(from: Endpoint.fetchMosque(for: "1")) { (result) in
+        MosqueDataClient().fetchAllMosques { (mosques, error) in
+            if let mosques = mosques {
+                print(mosques[0].updatedAt)
+            }
         }
-
+        
         title = NSLocalizedString("Mosques", comment: "")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
     }
