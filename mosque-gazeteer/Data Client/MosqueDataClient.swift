@@ -40,10 +40,8 @@ extension Endpoint {
 }
 
 class MosqueDataClient {
-    enum Result {
-        case success(Data)
-        case failure(Error?)
-    }
+
+    static let shared = MosqueDataClient()
 
     func fetchAllMosques(completionHandler: @escaping ([Mosque]?, Error?) -> Void) {
         let task = URLSession.shared.dataTask(with: Endpoint.fetchAllMosques().url) { data, _, error in
