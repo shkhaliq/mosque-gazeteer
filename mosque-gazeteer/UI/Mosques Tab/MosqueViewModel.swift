@@ -10,19 +10,17 @@ import Foundation
 
 class MosqueViewModel {
     let name: String
-    let salahs: [SalahViewModel]
+    let id: Int
 
-    init(name: String, salahs: [SalahViewModel]) {
+    init(name: String, id: Int) {
         self.name = name
-        self.salahs = salahs
+        self.id = id
     }
 }
 
 extension MosqueViewModel {
     convenience init(_ mosque: Mosque) {
-//        let salahs = mosque.salahs.map({ SalahViewModel(name: $0.name, time: $0.iqamah)})
-//        self.init(name: mosque.name, salahs: salahs)
-        self.init(name: mosque.name, salahs: [])
+        self.init(name: mosque.name, id: mosque.id)
     }
 }
 
@@ -34,5 +32,11 @@ class SalahViewModel {
     init(name: String, time: Date) {
         self.name = name
         self.time = time
+    }
+}
+
+extension SalahViewModel {
+    convenience init(_ salah: Salah) {
+        self.init(name: salah.name, time: salah.iqamah)
     }
 }
