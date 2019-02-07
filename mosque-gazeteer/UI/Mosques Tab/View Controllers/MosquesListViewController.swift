@@ -27,12 +27,8 @@ class MosquesListViewController: UITableViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self)
         dataSource.load {
-            self.tableView.reloadData()
-        }
-
-        MosqueDataClient.shared.fetchAllMosques { (mosques, error) in
-            if let mosques = mosques {
-                print(mosques[0].updatedAt)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
 

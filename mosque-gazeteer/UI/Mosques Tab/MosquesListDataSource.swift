@@ -13,7 +13,7 @@ class MosquesListDataSource {
     var items: [MosqueViewModel] = []
 
     public func load(_ completion: @escaping (() -> Void)) {
-        MosqueDataFetcher().fetch { (mosques, _) in
+        MosqueDataClient.shared.fetchAllMosques { (mosques, _) in
             guard let mosques = mosques else {
                 completion()
                 return
