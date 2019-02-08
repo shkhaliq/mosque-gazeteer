@@ -42,6 +42,7 @@
 		FEF50DD3220E114D00229C4B /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DD2220E114D00229C4B /* SearchCell.swift */; };
 		FEF50DD5220E15E300229C4B /* MosqueLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DD4220E15E300229C4B /* MosqueLabelCell.swift */; };
 		FEF50DD7220E2B9F00229C4B /* MosquesListSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DD6220E2B9F00229C4B /* MosquesListSectionController.swift */; };
+		FEF50DD9220E320A00229C4B /* MosqueLabelCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DD8220E320A00229C4B /* MosqueLabelCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		FEF50DD2220E114D00229C4B /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		FEF50DD4220E15E300229C4B /* MosqueLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueLabelCell.swift; sourceTree = "<group>"; };
 		FEF50DD6220E2B9F00229C4B /* MosquesListSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosquesListSectionController.swift; sourceTree = "<group>"; };
+		FEF50DD8220E320A00229C4B /* MosqueLabelCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueLabelCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,12 +171,13 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		FE899BCE2207A17B004F0996 /* Views */ = {
+		FE899BCE2207A17B004F0996 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				FE899BCF2207A188004F0996 /* PrayerTimeCellTests.swift */,
+				FEF50DD8220E320A00229C4B /* MosqueLabelCellTests.swift */,
 			);
-			path = Views;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FE899BD12207ACE4004F0996 /* Location Tab */ = {
@@ -238,7 +241,7 @@
 				FEF50DC8220D4B7500229C4B /* Test Support */,
 				FEF50DC3220D4A0200229C4B /* View Controllers */,
 				FEF50DC0220D48F500229C4B /* View Models */,
-				FE899BCE2207A17B004F0996 /* Views */,
+				FE899BCE2207A17B004F0996 /* Cells */,
 				FEAF84E4220006CA002E49DA /* Info.plist */,
 			);
 			path = "mosque-gazeteerTests";
@@ -611,6 +614,7 @@
 				FEF50DC2220D490400229C4B /* SalahViewModelTests.swift in Sources */,
 				FEF50DCC220D4C9600229C4B /* PrayersListViewControllerTests.swift in Sources */,
 				FEF50DC5220D4A1800229C4B /* MosquesViewControllerTests.swift in Sources */,
+				FEF50DD9220E320A00229C4B /* MosqueLabelCellTests.swift in Sources */,
 				FEAF851B2202B184002E49DA /* MosqueViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
