@@ -1,36 +1,31 @@
 //
-//  MosquesListSectionController.swift
+//  MosqueSalahsSectionController.swift
 //  mosque-gazeteer
 //
 //  Created by Haris Khaliq on 2019-02-08.
 //  Copyright © 2019 HarisKhaliq. All rights reserved.
 //
 
+import Foundation
 import IGListKit
 
-protocol MosquesListSectionControllerDelegate: class {
-    func didSelectMosque(_ viewModel: MosqueViewModel)
-}
+class MosqueSalahsSectionController: ListSectionController {
 
-class MosquesListSectionController: ListSectionController {
-
-    private var viewModel: MosqueViewModel?
-
-    weak var delegate: MosquesListSectionControllerDelegate?
+    private var viewModel: SalahViewModel?
 
     override func didUpdate(to object: Any) {
-        self.viewModel = object as? MosqueViewModel
+        self.viewModel = object as? SalahViewModel
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         guard let viewModel = viewModel,
             let cell = collectionContext?.dequeueReusableCell(
-                of: MosqueLabelCell.self,
+                of: PrayerTimeCell.self,
                 for: self,
-                at: index) as? MosqueLabelCell
+                at: index) as? PrayerTimeCell
             else {
                 fatalError("Unsupported view model")
-            }
+        }
         cell.bindViewModel(viewModel)
         return cell
     }
@@ -39,10 +34,4 @@ class MosquesListSectionController: ListSectionController {
         guard let collectionContext = collectionContext else { return .zero }
         return CGSize(width: collectionContext.containerSize.width, height: 55)
     }
-
-    override func didSelectItem(at index: Int) {
-        guard let viewModel = viewModel else { return }
-        delegate?.didSelectMosque(viewModel)
-    }
-
 }

@@ -1,27 +1,29 @@
 //
-//  MosquesViewController.swift
+//  MosqueSalahsViewController.swift
 //  mosque-gazeteer
 //
 //  Created by Haris Khaliq on 2019-02-08.
 //  Copyright © 2019 HarisKhaliq. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import IGListKit
 
-class MosquesViewController: UIViewController, ListAdapterDataSource, MosquesListSectionControllerDelegate {
+class MosqueSalahsViewController: UIViewController, ListAdapterDataSource {
 
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
     private lazy var adapter: ListAdapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self)
 
-    private static let searchBar: NSString = "Search Bar"
-    private var items: [ListDiffable] = [MosquesViewController.searchBar]
+    private var items: [SalahViewModel] = []
+    private let id: Int
     private let dataClient: MosqueDataClientType
 
-    init(dataClient: MosqueDataClientType = MosqueDataClient.shared) {
+    init(mosque: MosqueViewModel, dataClient: MosqueDataClientType = MosqueDataClient.shared) {
+        self.id = mosque.id
         self.dataClient = dataClient
         super.init(nibName: nil, bundle: nil)
+        self.title = mosque.name
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -37,17 +39,16 @@ class MosquesViewController: UIViewController, ListAdapterDataSource, MosquesLis
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         adapter.collectionView = collectionView
         adapter.dataSource = self
-        title = NSLocalizedString("Mosques", comment: "")
 
         load()
     }
 
     public func load() {
-        dataClient.fetchAllMosques {[weak self] (mosques, _) in
-            guard let self = self, let mosques = mosques else {
+        dataClient.fetchAllSalahs(for: id) { (salahs, _) in
+            guard let salahs = salahs else {
                 return
             }
-            self.items.append(contentsOf: mosques.map(MosqueViewModel.init))
+            self.items = salahs.map(SalahViewModel.init)
             DispatchQueue.main.async {
                 self.adapter.performUpdates(animated: true, completion: nil)
             }
@@ -60,21 +61,11 @@ class MosquesViewController: UIViewController, ListAdapterDataSource, MosquesLis
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        if let other = object as? NSString, other == MosquesViewController.searchBar {
-            return SearchSectionController()
-        }
-        let sectionController = MosquesSectionController()
-        sectionController.delegate = self
+        let sectionController = MosqueSalahsSectionController()
         return sectionController
     }
 
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
-    }
-
-    // MARK: - MosquesListSectionControllerDelegate
-    func didSelectMosque(_ viewModel: MosqueViewModel) {
-        let viewController = MosqueSalahsViewController(mosque: viewModel)
-        navigationController?.pushViewController(viewController, animated: true)
     }
 }
