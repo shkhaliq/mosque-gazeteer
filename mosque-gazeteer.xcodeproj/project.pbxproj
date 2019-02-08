@@ -44,6 +44,7 @@
 		FEF50DDB220E338A00229C4B /* MosqueSalahsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DDA220E338A00229C4B /* MosqueSalahsViewController.swift */; };
 		FEF50DDF220E35C200229C4B /* MosqueSalahsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DDE220E35C200229C4B /* MosqueSalahsSectionController.swift */; };
 		FEF50DE1220E36C700229C4B /* MosqueSalahsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DE0220E36C700229C4B /* MosqueSalahsViewControllerTests.swift */; };
+		FEF50DE4220E39B700229C4B /* AccountTabBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DE3220E39B700229C4B /* AccountTabBarProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		FEF50DDA220E338A00229C4B /* MosqueSalahsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueSalahsViewController.swift; sourceTree = "<group>"; };
 		FEF50DDE220E35C200229C4B /* MosqueSalahsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueSalahsSectionController.swift; sourceTree = "<group>"; };
 		FEF50DE0220E36C700229C4B /* MosqueSalahsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueSalahsViewControllerTests.swift; sourceTree = "<group>"; };
+		FEF50DE3220E39B700229C4B /* AccountTabBarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabBarProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		FE899BC522075E3C004F0996 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FEF50DE2220E39A400229C4B /* Account Tab */,
 				FE899BD12207ACE4004F0996 /* Location Tab */,
 				FEAF84FE2201ECFF002E49DA /* Mosques Tab */,
 				FEAF85172202AFCB002E49DA /* Settings Tab */,
@@ -365,6 +368,22 @@
 				FEF50DDE220E35C200229C4B /* MosqueSalahsSectionController.swift */,
 			);
 			path = "Section Controllers";
+			sourceTree = "<group>";
+		};
+		FEF50DE2220E39A400229C4B /* Account Tab */ = {
+			isa = PBXGroup;
+			children = (
+				FEF50DE5220E39F400229C4B /* View Controllers */,
+				FEF50DE3220E39B700229C4B /* AccountTabBarProvider.swift */,
+			);
+			path = "Account Tab";
+			sourceTree = "<group>";
+		};
+		FEF50DE5220E39F400229C4B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,6 +622,7 @@
 				FEAF850922029F38002E49DA /* UITableView+Register.swift in Sources */,
 				FEAF84F8220015B2002E49DA /* Mosque.swift in Sources */,
 				FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */,
+				FEF50DE4220E39B700229C4B /* AccountTabBarProvider.swift in Sources */,
 				FE899BD32207AD00004F0996 /* LocationTabBarProvider.swift in Sources */,
 				FE65603C22060EE50063D8D3 /* FeedbackViewController.swift in Sources */,
 				FEF50DD3220E114D00229C4B /* SearchCell.swift in Sources */,
