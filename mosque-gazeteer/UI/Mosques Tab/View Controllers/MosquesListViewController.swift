@@ -11,8 +11,10 @@ import UIKit
 class MosquesListViewController: UITableViewController {
 
     private var items: [MosqueViewModel] = []
+    private let dataClient: MosqueDataClientType
 
-    init() {
+    init(dataClient: MosqueDataClientType = MosqueDataClient.shared) {
+        self.dataClient = dataClient
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -33,7 +35,7 @@ class MosquesListViewController: UITableViewController {
     }
 
     public func load() {
-        MosqueDataClient.shared.fetchAllMosques { (mosques, _) in
+        dataClient.fetchAllMosques { (mosques, _) in
             guard let mosques = mosques else {
                 return
             }

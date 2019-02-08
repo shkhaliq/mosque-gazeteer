@@ -12,9 +12,11 @@ class PrayersListViewController: UITableViewController {
 
     private var items: [SalahViewModel] = []
     private let id: Int
+    private let dataClient: MosqueDataClientType
 
-    init(mosque: MosqueViewModel) {
+    init(mosque: MosqueViewModel, dataClient: MosqueDataClientType = MosqueDataClient.shared) {
         self.id = mosque.id
+        self.dataClient = dataClient
         super.init(nibName: nil, bundle: nil)
         self.title = mosque.name
     }
@@ -34,7 +36,7 @@ class PrayersListViewController: UITableViewController {
     }
 
     public func load() {
-        MosqueDataClient.shared.fetchAllSalahs(for: id) { (salahs, _) in
+        dataClient.fetchAllSalahs(for: id) { (salahs, _) in
             guard let salahs = salahs else {
                 return
             }

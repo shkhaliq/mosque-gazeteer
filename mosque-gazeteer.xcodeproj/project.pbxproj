@@ -20,10 +20,8 @@
 		FEAF84D5220006CA002E49DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D4220006CA002E49DA /* Assets.xcassets */; };
 		FEAF84D8220006CA002E49DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84D6220006CA002E49DA /* LaunchScreen.storyboard */; };
 		FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84EE22000C22002E49DA /* ApplicationService.swift */; };
-		FEAF84F122000C6E002E49DA /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84F022000C6E002E49DA /* FirebaseService.swift */; };
 		FEAF84F522001200002E49DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEAF84F422001200002E49DA /* GoogleService-Info.plist */; };
 		FEAF84F8220015B2002E49DA /* Mosque.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84F7220015B2002E49DA /* Mosque.swift */; };
-		FEAF84FD2201E912002E49DA /* MosqueDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84FC2201E912002E49DA /* MosqueDataFetcher.swift */; };
 		FEAF85002201ED23002E49DA /* MosquesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84FF2201ED23002E49DA /* MosquesListViewController.swift */; };
 		FEAF85042201EE2C002E49DA /* MosqueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF85032201EE2C002E49DA /* MosqueViewModel.swift */; };
 		FEAF850922029F38002E49DA /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF850822029F38002E49DA /* UITableView+Register.swift */; };
@@ -34,6 +32,12 @@
 		FEAF85192202AFE1002E49DA /* FeedbackTabProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF85182202AFE1002E49DA /* FeedbackTabProvider.swift */; };
 		FEAF851B2202B184002E49DA /* MosqueViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF851A2202B184002E49DA /* MosqueViewModelTests.swift */; };
 		FECF470A220AB18800DA3948 /* MosqueDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECF4709220AB18800DA3948 /* MosqueDataClient.swift */; };
+		FEF50DBF220D48DB00229C4B /* SalahViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DBE220D48DB00229C4B /* SalahViewModel.swift */; };
+		FEF50DC2220D490400229C4B /* SalahViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DC1220D490400229C4B /* SalahViewModelTests.swift */; };
+		FEF50DC5220D4A1800229C4B /* MosquesListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DC4220D4A1800229C4B /* MosquesListViewControllerTests.swift */; };
+		FEF50DC7220D4AC100229C4B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DC6220D4AC100229C4B /* Endpoint.swift */; };
+		FEF50DCA220D4B8200229C4B /* MockMosqueDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DC9220D4B8200229C4B /* MockMosqueDataClient.swift */; };
+		FEF50DCC220D4C9600229C4B /* PrayersListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DCB220D4C9600229C4B /* PrayersListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +72,8 @@
 		FEAF84DE220006CA002E49DA /* mosque-gazeteerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mosque-gazeteerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAF84E4220006CA002E49DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAF84EE22000C22002E49DA /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
-		FEAF84F022000C6E002E49DA /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		FEAF84F422001200002E49DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEAF84F7220015B2002E49DA /* Mosque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mosque.swift; sourceTree = "<group>"; };
-		FEAF84FC2201E912002E49DA /* MosqueDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueDataFetcher.swift; sourceTree = "<group>"; };
 		FEAF84FF2201ED23002E49DA /* MosquesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosquesListViewController.swift; sourceTree = "<group>"; };
 		FEAF85032201EE2C002E49DA /* MosqueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueViewModel.swift; sourceTree = "<group>"; };
 		FEAF850822029F38002E49DA /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
@@ -82,6 +84,12 @@
 		FEAF85182202AFE1002E49DA /* FeedbackTabProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTabProvider.swift; sourceTree = "<group>"; };
 		FEAF851A2202B184002E49DA /* MosqueViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueViewModelTests.swift; sourceTree = "<group>"; };
 		FECF4709220AB18800DA3948 /* MosqueDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueDataClient.swift; sourceTree = "<group>"; };
+		FEF50DBE220D48DB00229C4B /* SalahViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalahViewModel.swift; sourceTree = "<group>"; };
+		FEF50DC1220D490400229C4B /* SalahViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalahViewModelTests.swift; sourceTree = "<group>"; };
+		FEF50DC4220D4A1800229C4B /* MosquesListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosquesListViewControllerTests.swift; sourceTree = "<group>"; };
+		FEF50DC6220D4AC100229C4B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FEF50DC9220D4B8200229C4B /* MockMosqueDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMosqueDataClient.swift; sourceTree = "<group>"; };
+		FEF50DCB220D4C9600229C4B /* PrayersListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,9 +225,11 @@
 		FEAF84E1220006CA002E49DA /* mosque-gazeteerTests */ = {
 			isa = PBXGroup;
 			children = (
+				FEF50DC8220D4B7500229C4B /* Test Support */,
+				FEF50DC3220D4A0200229C4B /* View Controllers */,
+				FEF50DC0220D48F500229C4B /* View Models */,
 				FE899BCE2207A17B004F0996 /* Views */,
 				FEAF84E4220006CA002E49DA /* Info.plist */,
-				FEAF851A2202B184002E49DA /* MosqueViewModelTests.swift */,
 			);
 			path = "mosque-gazeteerTests";
 			sourceTree = "<group>";
@@ -230,7 +240,6 @@
 				FEAF84CD220006C8002E49DA /* AppDelegate.swift */,
 				FEAF850F2202A746002E49DA /* ApplicationLaunchService.swift */,
 				FEAF84EE22000C22002E49DA /* ApplicationService.swift */,
-				FEAF84F022000C6E002E49DA /* FirebaseService.swift */,
 			);
 			path = "App Delegate Services";
 			sourceTree = "<group>";
@@ -246,8 +255,8 @@
 		FEAF84FB2201E8D3002E49DA /* Data Client */ = {
 			isa = PBXGroup;
 			children = (
-				FEAF84FC2201E912002E49DA /* MosqueDataFetcher.swift */,
 				FECF4709220AB18800DA3948 /* MosqueDataClient.swift */,
+				FEF50DC6220D4AC100229C4B /* Endpoint.swift */,
 			);
 			path = "Data Client";
 			sourceTree = "<group>";
@@ -255,9 +264,9 @@
 		FEAF84FE2201ECFF002E49DA /* Mosques Tab */ = {
 			isa = PBXGroup;
 			children = (
+				FEF50DBD220D48CC00229C4B /* View Models */,
 				FE899BCB220790A9004F0996 /* View Controllers */,
 				FE899BC822078DC8004F0996 /* View */,
-				FEAF85032201EE2C002E49DA /* MosqueViewModel.swift */,
 				FEAF85142202AE4F002E49DA /* MosquesTabBarProvider.swift */,
 			);
 			path = "Mosques Tab";
@@ -297,6 +306,41 @@
 			path = "Settings Tab";
 			sourceTree = "<group>";
 		};
+		FEF50DBD220D48CC00229C4B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF85032201EE2C002E49DA /* MosqueViewModel.swift */,
+				FEF50DBE220D48DB00229C4B /* SalahViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		FEF50DC0220D48F500229C4B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF851A2202B184002E49DA /* MosqueViewModelTests.swift */,
+				FEF50DC1220D490400229C4B /* SalahViewModelTests.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		FEF50DC3220D4A0200229C4B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FEF50DC4220D4A1800229C4B /* MosquesListViewControllerTests.swift */,
+				FEF50DCB220D4C9600229C4B /* PrayersListViewControllerTests.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FEF50DC8220D4B7500229C4B /* Test Support */ = {
+			isa = PBXGroup;
+			children = (
+				FEF50DC9220D4B8200229C4B /* MockMosqueDataClient.swift */,
+			);
+			path = "Test Support";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,7 +352,6 @@
 				FEAF84C6220006C8002E49DA /* Sources */,
 				FEAF84C7220006C8002E49DA /* Frameworks */,
 				FEAF84C8220006C8002E49DA /* Resources */,
-				B1FA47101B848814B8138185 /* [CP] Embed Pods Frameworks */,
 				FE65603D22061AAF0063D8D3 /* ShellScript */,
 			);
 			buildRules = (
@@ -443,34 +486,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteerTests/Pods-mosque-gazeteerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B1FA47101B848814B8138185 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B9102CBEB92BE323BF4BBA31 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,7 +536,6 @@
 				FE899BCA22078DD2004F0996 /* PrayerTimeCell.swift in Sources */,
 				FEAF85132202ADD3002E49DA /* RootTabBarController.swift in Sources */,
 				FEAF85102202A746002E49DA /* ApplicationLaunchService.swift in Sources */,
-				FEAF84FD2201E912002E49DA /* MosqueDataFetcher.swift in Sources */,
 				FEAF85002201ED23002E49DA /* MosquesListViewController.swift in Sources */,
 				FE899BCD220790C3004F0996 /* PrayersListViewController.swift in Sources */,
 				FE899BD62207AEDA004F0996 /* LocationViewController.swift in Sources */,
@@ -529,10 +543,11 @@
 				FE899BD82207C8EE004F0996 /* DateFormatter+Custom.swift in Sources */,
 				FEAF85152202AE4F002E49DA /* MosquesTabBarProvider.swift in Sources */,
 				FECF470A220AB18800DA3948 /* MosqueDataClient.swift in Sources */,
+				FEF50DBF220D48DB00229C4B /* SalahViewModel.swift in Sources */,
 				FEAF84EF22000C22002E49DA /* ApplicationService.swift in Sources */,
 				FEAF85192202AFE1002E49DA /* FeedbackTabProvider.swift in Sources */,
+				FEF50DC7220D4AC100229C4B /* Endpoint.swift in Sources */,
 				FEAF850922029F38002E49DA /* UITableView+Register.swift in Sources */,
-				FEAF84F122000C6E002E49DA /* FirebaseService.swift in Sources */,
 				FEAF84F8220015B2002E49DA /* Mosque.swift in Sources */,
 				FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */,
 				FE899BD32207AD00004F0996 /* LocationTabBarProvider.swift in Sources */,
@@ -544,7 +559,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF50DCA220D4B8200229C4B /* MockMosqueDataClient.swift in Sources */,
 				FE899BD02207A188004F0996 /* PrayerTimeCellTests.swift in Sources */,
+				FEF50DC2220D490400229C4B /* SalahViewModelTests.swift in Sources */,
+				FEF50DCC220D4C9600229C4B /* PrayersListViewControllerTests.swift in Sources */,
+				FEF50DC5220D4A1800229C4B /* MosquesListViewControllerTests.swift in Sources */,
 				FEAF851B2202B184002E49DA /* MosqueViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

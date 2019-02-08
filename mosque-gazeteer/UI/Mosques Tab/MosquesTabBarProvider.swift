@@ -20,7 +20,4 @@ class MosquesTabBarProvider: TabBarControllerProvider {
     var viewController: UIViewController {
         return MosquesListViewController()
     }
-
-
-
 }

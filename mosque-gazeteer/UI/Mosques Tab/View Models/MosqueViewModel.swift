@@ -23,20 +23,3 @@ extension MosqueViewModel {
         self.init(name: mosque.name, id: mosque.id)
     }
 }
-
-
-class SalahViewModel {
-    let name: String
-    let time: Date
-
-    init(name: String, time: Date) {
-        self.name = name
-        self.time = time
-    }
-}
-
-extension SalahViewModel {
-    convenience init(_ salah: Salah) {
-        self.init(name: salah.name, time: salah.iqamah)
-    }
-}

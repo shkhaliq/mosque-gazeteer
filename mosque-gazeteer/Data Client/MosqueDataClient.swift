@@ -8,40 +8,12 @@
 
 import Foundation
 
-struct Endpoint {
-    let path: String
+protocol MosqueDataClientType {
+    func fetchAllMosques(completionHandler: @escaping ([Mosque]?, Error?) -> Void)
+    func fetchAllSalahs(for id: Int, completionHandler: @escaping ([Salah]?, Error?) -> Void)
 }
 
-extension Endpoint {
-    var url: URL {
-        var components = URLComponents()
-        components.scheme = "http"
-        components.host = "localhost"
-        components.port = 3000
-        components.path = path
-        let url = components.url! //s
-        print(url.absoluteURL)
-        return url
-    }
-}
-
-
-extension Endpoint {
-
-    static func fetchAllMosques() -> Endpoint {
-        return Endpoint(path: "/mosques")
-    }
-
-    static func fetchMosque(for id: String) -> Endpoint {
-        return Endpoint(path: "/mosques/\(id)")
-    }
-
-    static func fetchSalahs(for id: Int) -> Endpoint {
-        return Endpoint(path: "/mosques/\(id)/salahs")
-    }
-}
-
-class MosqueDataClient {
+class MosqueDataClient: MosqueDataClientType {
 
     static let shared = MosqueDataClient()
 
@@ -89,12 +61,4 @@ class MosqueDataClient {
 
         task.resume()
     }
-
-
-//    func loadData(from endpoint: Endpoint,
-//                  completionHandler: @escaping (Result) -> Void) {
-//        guard let url = endpoint.url else {
-//            completionHandler(.failure(NSError(domain: "dd", code: 400, userInfo: nil)))
-//            return
-//        }
 }

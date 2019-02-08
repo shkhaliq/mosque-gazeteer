@@ -13,10 +13,23 @@ class Mosque: Codable {
     let name: String
     let publiclyAccessible: Bool?
     let updatedAt: Date
+
+    init(id: Int, name: String, publiclyAccessible: Bool? = nil, updatedAt: Date) {
+        self.id = id
+        self.name = name
+        self.publiclyAccessible = publiclyAccessible
+        self.updatedAt = updatedAt
+    }
 }
 
 class Salah: Codable {
     let begins: Date?
     let iqamah: Date
     let name: String
+
+    init(name: String, iqamah: Date, begins: Date? = nil) {
+        self.name = name
+        self.iqamah = iqamah
+        self.begins = begins
+    }
 }
