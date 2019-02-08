@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var services: [ApplicationService] {
         return [
             ApplicationLaunchService(),
-            FirebaseService(),
         ]
     }
 

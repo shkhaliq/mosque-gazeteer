@@ -10,10 +10,11 @@ import UIKit
 
 class MosquesListViewController: UITableViewController {
 
-    private let dataSource: MosquesListDataSource
+    private var items: [MosqueViewModel] = []
+    private let dataClient: MosqueDataClientType
 
-    init(dataSource: MosquesListDataSource) {
-        self.dataSource = dataSource
+    init(dataClient: MosqueDataClientType = MosqueDataClient.shared) {
+        self.dataClient = dataClient
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -26,21 +27,32 @@ class MosquesListViewController: UITableViewController {
 
         tableView.dataSource = self
         tableView.register(UITableViewCell.self)
-        dataSource.load {
-            self.tableView.reloadData()
-        }
 
         title = NSLocalizedString("Mosques", comment: "")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
+
+        load()
+    }
+
+    public func load() {
+        dataClient.fetchAllMosques { (mosques, _) in
+            guard let mosques = mosques else {
+                return
+            }
+            self.items = mosques.map(MosqueViewModel.init)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.items.count
+        return items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = dataSource.items[indexPath.row]
+        let item = items[indexPath.row]
         let cell = tableView.dequeueReusableCell(UITableViewCell.self, for: indexPath)
         // Will write a custom cell
         cell.textLabel?.text = item.name
@@ -48,9 +60,9 @@ class MosquesListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = dataSource.items[indexPath.row]
+        let item = items[indexPath.row]
 
-        let viewController = PrayersListViewController(items: item.salahs)
+        let viewController = PrayersListViewController(mosque: item)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

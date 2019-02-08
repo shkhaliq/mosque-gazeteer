@@ -7,9 +7,6 @@ target 'mosque-gazeteer' do
 
   # Pods for mosque-gazeteer
 
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-  pod 'CodableFirebase'
   pod 'SwiftLint'
   
   target 'mosque-gazeteerTests' do

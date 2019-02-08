@@ -10,11 +10,15 @@ import UIKit
 
 class PrayersListViewController: UITableViewController {
 
-    private let items: [SalahViewModel]
+    private var items: [SalahViewModel] = []
+    private let id: Int
+    private let dataClient: MosqueDataClientType
 
-    init(items: [SalahViewModel]) {
-        self.items = items
+    init(mosque: MosqueViewModel, dataClient: MosqueDataClientType = MosqueDataClient.shared) {
+        self.id = mosque.id
+        self.dataClient = dataClient
         super.init(nibName: nil, bundle: nil)
+        self.title = mosque.name
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -27,9 +31,20 @@ class PrayersListViewController: UITableViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(PrayerTimeCell.self)
-        tableView.reloadData()
 
-        title = NSLocalizedString("Prayers", comment: "")
+        load()
+    }
+
+    public func load() {
+        dataClient.fetchAllSalahs(for: id) { (salahs, _) in
+            guard let salahs = salahs else {
+                return
+            }
+            self.items = salahs.map(SalahViewModel.init)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - UITableViewDataSource

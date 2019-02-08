@@ -20,7 +20,4 @@ class FeedbackTabProvider: TabBarControllerProvider {
     var viewController: UIViewController {
         return FeedbackViewController()
     }
-
-
-
 }

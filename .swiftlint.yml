@@ -29,3 +29,9 @@ opt_in_rules:
 
 trailing_comma:
   mandatory_comma: true
+identifier_name:
+  min_length:
+    warning: 2
+    error: 1
+  excluded:
+    - id

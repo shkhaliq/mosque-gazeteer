@@ -12,13 +12,7 @@ import XCTest
 class MosqueViewModelTests: XCTestCase {
 
     func testSimpleViewModel() {
-        let mosqueViewModel = MosqueViewModel(name: "MyMosque", salahs: [])
+        let mosqueViewModel = MosqueViewModel(name: "MyMosque", id: 1)
         XCTAssert(mosqueViewModel.name == "MyMosque")
     }
-
-    func testEmptySalahs() {
-        let mosqueViewModel = MosqueViewModel(name: "MyMosque", salahs: [])
-        XCTAssertTrue(mosqueViewModel.salahs.isEmpty)
-    }
-
 }

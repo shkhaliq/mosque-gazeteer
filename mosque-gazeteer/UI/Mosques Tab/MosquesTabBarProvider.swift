@@ -18,10 +18,6 @@ class MosquesTabBarProvider: TabBarControllerProvider {
     }
 
     var viewController: UIViewController {
-        let dataSource = MosquesListDataSource()
-        return MosquesListViewController(dataSource: dataSource)
+        return MosquesListViewController()
     }
-
-
-
 }
