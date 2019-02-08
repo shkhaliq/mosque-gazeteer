@@ -19,7 +19,7 @@ extension Endpoint {
         components.host = "localhost"
         components.port = 3000
         components.path = path
-        let url = components.url! //s
+        let url = components.url! //swiftlint:disable:this force_unwrapping
         print(url.absoluteURL)
         return url
     }
