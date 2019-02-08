@@ -1,5 +1,5 @@
 //
-//  MosquesListViewControllerTests.swift
+//  MosquesViewControllerTests.swift
 //  mosque-gazeteerTests
 //
 //  Created by Haris Khaliq on 2019-02-08.
@@ -10,10 +10,10 @@ import SnapshotTesting
 import XCTest
 @testable import mosque_gazeteer
 
-class MosquesListViewControllerTests: XCTestCase {
+class MosquesViewControllerTests: XCTestCase {
     func testViewController() {
         let mockDataClient = MockMosqueDataClient()
-        let viewController = MosquesListViewController(dataClient: mockDataClient)
+        let viewController = MosquesViewController(dataClient: mockDataClient)
         assertSnapshot(matching: viewController, as: .image)
     }
 }

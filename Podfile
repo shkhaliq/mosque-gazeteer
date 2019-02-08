@@ -8,6 +8,7 @@ target 'mosque-gazeteer' do
   # Pods for mosque-gazeteer
 
   pod 'SwiftLint'
+  pod 'IGListKit'
   
   target 'mosque-gazeteerTests' do
     inherit! :search_paths

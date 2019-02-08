@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PrayerTimeCell: UITableViewCell {
+class PrayerTimeCell: UICollectionViewCell {
 
     private let prayerLabel: UILabel = {
         let label = UILabel()
@@ -24,8 +24,8 @@ class PrayerTimeCell: UITableViewCell {
         return label
     }()
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         commonInit()
     }
 
