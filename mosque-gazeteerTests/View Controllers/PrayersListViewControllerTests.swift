@@ -15,6 +15,6 @@ class PrayersListViewControllerTests: XCTestCase {
         let mockDataClient = MockMosqueDataClient()
         let mockMosque = MosqueViewModel(name: "Mosque 1", id: 2)
         let viewController = PrayersListViewController(mosque: mockMosque, dataClient: mockDataClient)
-        assertSnapshot(matching: viewController, as: .image)
+        assertSnapshot(matching: viewController, as: Snapshotting.hierarchy)
     }
 }
