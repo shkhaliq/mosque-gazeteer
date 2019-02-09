@@ -18,6 +18,7 @@ class LaunchCoordinator {
             MosquesTabBarProvider(),
             LocationTabBarProvider(),
             FeedbackTabProvider(),
+            AccountTabBarProvider(),
         ]
     }
 
