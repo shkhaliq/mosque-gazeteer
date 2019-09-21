@@ -10,11 +10,11 @@ scheme("mosque-gazeteer")
 
 code_coverage(true)
 
-devices(["iPhone XR"])
+devices(["iPhone 11"])
 
 # open_report(true)
 
 # clean(true)
 
 # Enable skip_build to skip debug builds for faster test performance
-skip_build(true)
+# skip_build(true)

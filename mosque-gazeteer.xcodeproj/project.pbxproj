@@ -516,20 +516,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mosque-gazeteer/Pods-mosque-gazeteer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		62340B8C3EA4663564BD7199 /* [CP] Embed Pods Frameworks */ = {
@@ -538,20 +533,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteerTests/Pods-mosque-gazeteerTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapshotTesting/SnapshotTesting.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mosque-gazeteerTests/Pods-mosque-gazeteerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapshotTesting.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mosque-gazeteerTests/Pods-mosque-gazeteerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mosque-gazeteerTests/Pods-mosque-gazeteerTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mosque-gazeteerTests/Pods-mosque-gazeteerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B9102CBEB92BE323BF4BBA31 /* [CP] Check Pods Manifest.lock */ = {
