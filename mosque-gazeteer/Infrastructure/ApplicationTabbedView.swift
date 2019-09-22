@@ -12,13 +12,19 @@ import SwiftUI
 struct ApplicationTabbedView: View {
     
     @State var selection: Int = 1
+    var mosques: [MosqueViewModel] = [
+        MosqueViewModel(name: "Haris", id: 1),
+    ]
     
     var body: some View {
         TabView(selection: $selection) {
-            Text("Salah")
-                .tabItem {
-                    Image(systemName: "moon")
-                    Text("Salah")
+            NavigationView {
+                MosquesView(mosques: mosques)
+                    .navigationBarTitle(Text("Mosques"))
+            }
+            .tabItem {
+                Image(systemName: "moon")
+                Text("Salah")
             }
             .tag(1)
             Text("Map")
@@ -27,13 +33,17 @@ struct ApplicationTabbedView: View {
                     Text("Location")
             }
             .tag(2)
-            SignInView()
-                .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
-                    Text("Account")
+            NavigationView {
+                SignInView()
+                    .navigationBarTitle("Account")
+            }
+            .tabItem {
+                Image(systemName: "person.crop.circle.fill")
+                Text("Account")
             }
             .tag(3)
         }
         .font(.headline)
+        .accentColor(.green)
     }
 }

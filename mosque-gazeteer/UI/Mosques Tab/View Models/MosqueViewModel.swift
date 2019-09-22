@@ -40,3 +40,5 @@ extension MosqueViewModel: ListDiffable {
         return self == other
     }
 }
+
+extension MosqueViewModel: Identifiable {}

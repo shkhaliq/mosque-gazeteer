@@ -25,7 +25,7 @@ struct SignInView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
                 
-            }) {
+            }, label: {
                 VStack {
                     Text("Sign In")
                         .foregroundColor(.white)
@@ -33,10 +33,10 @@ struct SignInView: View {
                 .padding()
                 .background(Color.blue)
                 .cornerRadius(5)
-            }
+            })
             Button(action: {
                 
-            }) {
+            }, label: {
                 VStack {
                     Text("Create Account")
                         .foregroundColor(.blue)
@@ -44,7 +44,7 @@ struct SignInView: View {
                 .padding()
                 .background(Color.gray.opacity(0.5))
                 .cornerRadius(5)
-            }
+            })
         }
     }
 }
