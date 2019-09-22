@@ -450,6 +450,7 @@
 					};
 					FEAF84DD220006CA002E49DA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = FEAF84C9220006C8002E49DA;
 					};
 				};
@@ -836,7 +837,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harisKhaliq.mosque-gazeteerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mosque-gazeteer.app/mosque-gazeteer";
 			};
@@ -859,7 +860,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harisKhaliq.mosque-gazeteerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mosque-gazeteer.app/mosque-gazeteer";
 			};
