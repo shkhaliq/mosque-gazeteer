@@ -11,7 +11,6 @@ import SwiftUI
 
 class ApplicationLaunchService: NSObject, ApplicationService {
 
-    private var coordinator: LaunchCoordinator?
     var window: UIWindow?
     
     func application(
