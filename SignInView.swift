@@ -39,10 +39,10 @@ struct SignInView: View {
             }) {
                 VStack {
                     Text("Create Account")
-                        .foregroundColor(.white)
+                        .foregroundColor(.blue)
                 }
                 .padding()
-                .background(Color.blue)
+                .background(Color.gray.opacity(0.5))
                 .cornerRadius(5)
             }
         }

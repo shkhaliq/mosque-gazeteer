@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ApplicationLaunchService: NSObject, ApplicationService {
 
@@ -17,10 +18,10 @@ class ApplicationLaunchService: NSObject, ApplicationService {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 
-        coordinator = LaunchCoordinator()
-        coordinator?.start(animated: true)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = coordinator?.tabBarController
+        if #available(iOS 13.0.0, *) {
+            window?.rootViewController = UIHostingController(rootView: ApplicationTabbedView())
+        }
         window?.makeKeyAndVisible()
         return true
     }
