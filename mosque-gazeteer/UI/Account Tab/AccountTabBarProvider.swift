@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class AccountTabBarProvider: TabBarControllerProvider {
     var tabBarTitle: String {
@@ -18,6 +19,10 @@ class AccountTabBarProvider: TabBarControllerProvider {
     }
 
     var viewController: UIViewController {
-        return UIViewController()
+        if #available(iOS 13.0.0, *) {
+            return UIHostingController(rootView: SignInView())
+        } else {
+            return UIViewController()
+        }
     }
 }
