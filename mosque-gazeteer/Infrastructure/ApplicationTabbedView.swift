@@ -13,9 +13,11 @@ struct ApplicationTabbedView: View {
     
     @State var selection: Int = 1
     var mosques: [MosqueViewModel] = [
-        MosqueViewModel(name: "Haris", id: 1),
+        MosqueViewModel(
+            id: 1,
+            name: "Baitul Mukarram Islamic Society",
+            address: "3340 Danforth Ave, Scarborough, ON M1L 1C6"),
     ]
-    
     var body: some View {
         TabView(selection: $selection) {
             NavigationView {

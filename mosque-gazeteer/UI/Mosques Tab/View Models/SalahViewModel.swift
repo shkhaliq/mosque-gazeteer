@@ -40,3 +40,5 @@ extension SalahViewModel: ListDiffable {
         return self == other
     }
 }
+
+extension SalahViewModel: Identifiable {}

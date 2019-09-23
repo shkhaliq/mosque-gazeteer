@@ -12,8 +12,11 @@ struct MosqueView: View {
     var mosque: MosqueViewModel
     
     var body: some View {
-        HStack {
+        VStack {
             Text(mosque.name)
+            Text(mosque.address)
+                .font(.subheadline)
         }
+        .padding()
     }
 }
