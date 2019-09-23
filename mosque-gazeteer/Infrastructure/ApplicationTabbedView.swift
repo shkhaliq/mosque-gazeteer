@@ -20,6 +20,12 @@ struct ApplicationTabbedView: View {
     ]
     var body: some View {
         TabView(selection: $selection) {
+            Text("Nearby")
+                .tabItem {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text("Location")
+            }
+            .tag(1)
             NavigationView {
                 MosquesView(mosques: mosques)
                     .navigationBarTitle(Text("Mosques"))
@@ -27,12 +33,6 @@ struct ApplicationTabbedView: View {
             .tabItem {
                 Image(systemName: "moon")
                 Text("Salah")
-            }
-            .tag(1)
-            Text("Map")
-                .tabItem {
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Location")
             }
             .tag(2)
             NavigationView {

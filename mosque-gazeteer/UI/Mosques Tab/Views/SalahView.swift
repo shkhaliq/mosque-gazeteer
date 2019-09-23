@@ -21,7 +21,7 @@ struct SalahView: View {
                     Text("\(salah.time, formatter: DateFormatter.localTimeFormat)").font(.subheadline)
                 }
             }
-            .listStyle(.grouped)
+            .listStyle(GroupedListStyle())
         }
     }
 }
