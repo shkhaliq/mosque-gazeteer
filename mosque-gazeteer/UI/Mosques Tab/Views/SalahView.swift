@@ -12,9 +12,7 @@ struct SalahView: View {
     var salahs: [SalahViewModel]
 
     var body: some View {
-        VStack {
-            VStack {
-                Text("Timings").font(.headline)
+        VStack(alignment: .leading) {
                 List(salahs) { salah in
                     HStack {
                         Text(salah.name).font(.subheadline)
@@ -24,6 +22,5 @@ struct SalahView: View {
                 }
                 .listStyle(GroupedListStyle())
             }
-        }
     }
 }

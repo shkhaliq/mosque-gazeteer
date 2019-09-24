@@ -10,20 +10,44 @@ import UIKit
 import MapKit
 import SwiftUI
 
+struct LocationViewModel {
+    let latitude: Double
+    let longitude: Double
+    let title: String?
+}
+
 class LocationViewController: UIViewController {
     
     private let mapView: MKMapView = MKMapView(frame: .zero)
     private let regionRadius: CLLocationDistance = 100000
     // GTA
-    private let initialLocation = CLLocation(latitude: 43.638830778, longitude: -79.385665124)
+    private let initialLocation = CLLocation(latitude: 43.693796, longitude: -79.277703)
+    
+    private let annotations: [MKPointAnnotation]
+    
+    init(locations: [LocationViewModel]) {
+        self.annotations = locations.map { location in
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            annotation.title = location.title
+            return annotation
+        }
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(mapView)
         mapView.frame = view.bounds
+        mapView.delegate = self
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         centerMapOnLocation(location: initialLocation)
+        mapView.showAnnotations(annotations, animated: true)
     }
     
     func centerMapOnLocation(location: CLLocation) {
@@ -36,13 +60,42 @@ class LocationViewController: UIViewController {
     }
 }
 
+extension LocationViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotationView")
+        annotationView.canShowCallout = true
+        annotationView.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
+        
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView,
+                 annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+        let salahs: [SalahViewModel] = [
+            SalahViewModel(name: "Fajr", time: Date()),
+            SalahViewModel(name: "Zuhr", time: Date()),
+            SalahViewModel(name: "Asr", time: Date()),
+            SalahViewModel(name: "Maghrib", time: Date()),
+            SalahViewModel(name: "Isha", time: Date()),
+        ]
+        let controller = UIHostingController(rootView: SalahView(salahs: salahs))
+        present(controller, animated: true, completion: nil)
+    }
+}
+
 struct SuperLocationViewController: UIViewControllerRepresentable {
     
     typealias UIViewControllerType = LocationViewController
     
+    private let locations: [LocationViewModel] = [
+        LocationViewModel(latitude: 43.693796, longitude: -79.277703, title: "Baitul Mukarram Masjid"),
+        LocationViewModel(latitude: 43.691420, longitude: -79.287538, title: "Baitul Aman Masjid"),
+    ]
+    
     func makeUIViewController(
         context: UIViewControllerRepresentableContext<SuperLocationViewController>) -> LocationViewController {
-        return LocationViewController()
+        return LocationViewController(locations: locations)
     }
     
     func updateUIViewController(_ uiViewController: LocationViewController,
