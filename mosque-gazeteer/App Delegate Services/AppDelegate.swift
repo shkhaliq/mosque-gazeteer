@@ -13,8 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var coordinator: LaunchCoordinator?
-
     var services: [ApplicationService] {
         return [
             ApplicationLaunchService(),
