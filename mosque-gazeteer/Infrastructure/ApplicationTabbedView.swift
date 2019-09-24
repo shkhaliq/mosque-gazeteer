@@ -20,10 +20,10 @@ struct ApplicationTabbedView: View {
     ]
     var body: some View {
         TabView(selection: $selection) {
-            Text("Nearby")
-                .tabItem {
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Location")
+            SuperLocationViewControllerView()
+            .tabItem {
+                Image(systemName: "mappin.and.ellipse")
+                Text("Location")
             }
             .tag(1)
             NavigationView {

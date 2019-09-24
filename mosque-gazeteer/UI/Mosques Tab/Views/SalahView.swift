@@ -10,18 +10,20 @@ import SwiftUI
 
 struct SalahView: View {
     var salahs: [SalahViewModel]
-    
+
     var body: some View {
         VStack {
-            Text("Timings").font(.headline)
-            List(salahs) { salah in
-                HStack {
-                    Text(salah.name)
-                    Spacer()
-                    Text("\(salah.time, formatter: DateFormatter.localTimeFormat)").font(.subheadline)
+            VStack {
+                Text("Timings").font(.headline)
+                List(salahs) { salah in
+                    HStack {
+                        Text(salah.name).font(.subheadline)
+                        Spacer()
+                        Text("\(salah.time, formatter: DateFormatter.localTimeFormat)").font(.headline)
+                    }
                 }
+                .listStyle(GroupedListStyle())
             }
-            .listStyle(GroupedListStyle())
         }
     }
 }
