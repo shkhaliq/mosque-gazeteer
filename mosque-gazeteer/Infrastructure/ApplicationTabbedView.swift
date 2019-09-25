@@ -29,6 +29,7 @@ struct ApplicationTabbedView: View {
             NavigationView {
                 MosquesView(mosques: mosques)
                     .navigationBarTitle(Text("Mosques"))
+                    .navigationBarItems(trailing: Image(systemName: "plus.circle"))
             }
             .tabItem {
                 Image(systemName: "moon")
@@ -38,6 +39,7 @@ struct ApplicationTabbedView: View {
             NavigationView {
                 SignInView()
                     .navigationBarTitle("Account")
+                    .navigationBarItems(trailing: Image(systemName: "wrench"))
             }
             .tabItem {
                 Image(systemName: "person.crop.circle.fill")
