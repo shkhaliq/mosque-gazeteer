@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import IGListKit
 
 class MosqueViewModel: Equatable {
 
@@ -29,17 +28,6 @@ class MosqueViewModel: Equatable {
 extension MosqueViewModel {
     convenience init(_ mosque: Mosque) {
         self.init(id: mosque.id, name: mosque.name, address: "")
-    }
-}
-
-extension MosqueViewModel: ListDiffable {
-    func diffIdentifier() -> NSObjectProtocol {
-        return id as NSObject
-    }
-
-    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        guard let other = object as? MosqueViewModel else { return false }
-        return self == other
     }
 }
 
