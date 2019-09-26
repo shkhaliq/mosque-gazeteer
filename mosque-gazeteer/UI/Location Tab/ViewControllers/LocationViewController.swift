@@ -23,7 +23,9 @@ class LocationViewController: UIViewController {
     // GTA
     private let initialLocation = CLLocation(latitude: 43.693796, longitude: -79.277703)
     
-    private let annotations: [MKPointAnnotation]
+    private var annotations: [MKPointAnnotation]
+    
+    private let locationManager = CLLocationManager()
     
     init(locations: [LocationViewModel]) {
         self.annotations = locations.map { location in
@@ -33,6 +35,7 @@ class LocationViewController: UIViewController {
             return annotation
         }
         super.init(nibName: nil, bundle: nil)
+        requestLocationServices()
     }
     
     required init?(coder: NSCoder) {
@@ -57,6 +60,16 @@ class LocationViewController: UIViewController {
             longitudinalMeters: regionRadius
         )
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    private func requestLocationServices() {
+        if CLLocationManager.locationServicesEnabled() == false {
+            let pointAnnotation = MKPointAnnotation()
+            if let coordinate = locationManager.location?.coordinate {
+                pointAnnotation.coordinate = coordinate
+                mapView.addAnnotation(pointAnnotation)
+            }
+        }
     }
 }
 
@@ -88,10 +101,7 @@ struct SuperLocationViewController: UIViewControllerRepresentable {
     
     typealias UIViewControllerType = LocationViewController
     
-    private let locations: [LocationViewModel] = [
-        LocationViewModel(latitude: 43.693796, longitude: -79.277703, title: "Baitul Mukarram Masjid"),
-        LocationViewModel(latitude: 43.691420, longitude: -79.287538, title: "Baitul Aman Masjid"),
-    ]
+    var locations: [LocationViewModel]
     
     func makeUIViewController(
         context: UIViewControllerRepresentableContext<SuperLocationViewController>) -> LocationViewController {
@@ -105,7 +115,10 @@ struct SuperLocationViewController: UIViewControllerRepresentable {
 }
 
 struct SuperLocationViewControllerView: View {
+    
+    var locations: [LocationViewModel]
+    
     var body: some View {
-        return SuperLocationViewController()
+        return SuperLocationViewController(locations: locations)
     }
 }

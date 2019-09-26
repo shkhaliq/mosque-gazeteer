@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0.0, *)
 struct ApplicationTabbedView: View {
     
     @State var selection: Int = 1
@@ -18,12 +17,18 @@ struct ApplicationTabbedView: View {
             name: "Baitul Mukarram Islamic Society",
             address: "3340 Danforth Ave, Scarborough, ON M1L 1C6"),
     ]
+    
+    var locations: [LocationViewModel] = [
+        LocationViewModel(latitude: 43.693796, longitude: -79.277703, title: "Baitul Mukarram Masjid"),
+        LocationViewModel(latitude: 43.691420, longitude: -79.287538, title: "Baitul Aman Masjid"),
+    ]
+    
     var body: some View {
         TabView(selection: $selection) {
-            SuperLocationViewControllerView()
-            .tabItem {
-                Image(systemName: "mappin.and.ellipse")
-                Text("Location")
+            SuperLocationViewControllerView(locations: locations)
+                .tabItem {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text("Location")
             }
             .tag(1)
             NavigationView {
