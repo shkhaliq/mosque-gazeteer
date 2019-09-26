@@ -67,6 +67,7 @@ class LocationViewController: UIViewController {
             let pointAnnotation = MKPointAnnotation()
             if let coordinate = locationManager.location?.coordinate {
                 pointAnnotation.coordinate = coordinate
+                pointAnnotation.title = "Current Location"
                 mapView.addAnnotation(pointAnnotation)
             }
         }
