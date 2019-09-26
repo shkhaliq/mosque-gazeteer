@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import IGListKit
 
 class SalahViewModel: Equatable {
 
@@ -27,17 +26,6 @@ class SalahViewModel: Equatable {
 extension SalahViewModel {
     convenience init(_ salah: Salah) {
         self.init(name: salah.name, time: salah.iqamah)
-    }
-}
-
-extension SalahViewModel: ListDiffable {
-    func diffIdentifier() -> NSObjectProtocol {
-        return name as NSString
-    }
-
-    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        guard let other = object as? SalahViewModel else { return false }
-        return self == other
     }
 }
 
