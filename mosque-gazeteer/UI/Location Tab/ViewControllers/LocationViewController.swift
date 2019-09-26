@@ -21,11 +21,16 @@ class LocationViewController: UIViewController {
     private let mapView: MKMapView = MKMapView(frame: .zero)
     private let regionRadius: CLLocationDistance = 100000
     // GTA
-    private let initialLocation = CLLocation(latitude: 43.693796, longitude: -79.277703)
+    private var currentLocation = CLLocation(latitude: 43.693796, longitude: -79.277703)
     
     private var annotations: [MKPointAnnotation]
     
-    private let locationManager = CLLocationManager()
+    
+    private lazy var locationManager: CLLocationManager = {
+        let manager =  CLLocationManager()
+        manager.delegate = self
+        return manager
+    }()
     
     init(locations: [LocationViewModel]) {
         self.annotations = locations.map { location in
@@ -35,7 +40,7 @@ class LocationViewController: UIViewController {
             return annotation
         }
         super.init(nibName: nil, bundle: nil)
-        requestLocationServices()
+        locationManager.requestWhenInUseAuthorization()
     }
     
     required init?(coder: NSCoder) {
@@ -49,36 +54,37 @@ class LocationViewController: UIViewController {
         mapView.frame = view.bounds
         mapView.delegate = self
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        centerMapOnLocation(location: initialLocation)
+        mapView.showsCompass = true
+        mapView.showsUserLocation = true
         mapView.showAnnotations(annotations, animated: true)
     }
     
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegion(
-            center: location.coordinate,
-            latitudinalMeters: regionRadius,
-            longitudinalMeters: regionRadius
+        let center = CLLocationCoordinate2D(
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude
         )
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
-    
-    private func requestLocationServices() {
-        if CLLocationManager.locationServicesEnabled() == false {
-            let pointAnnotation = MKPointAnnotation()
-            if let coordinate = locationManager.location?.coordinate {
-                pointAnnotation.coordinate = coordinate
-                pointAnnotation.title = "Current Location"
-                mapView.addAnnotation(pointAnnotation)
-            }
-        }
+        let coordinateRegion = MKCoordinateRegion(
+            center: center,
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        )
+        mapView.setRegion(coordinateRegion, animated: false)
     }
 }
 
 extension LocationViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotationView")
-        annotationView.canShowCallout = true
-        annotationView.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
+        let annotationView: MKPinAnnotationView
+
+        if annotation is MKUserLocation {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotationView")
+            annotationView.animatesDrop = true
+            annotationView.pinTintColor = UIColor.green
+        } else {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotationView")
+            annotationView.canShowCallout = true
+            annotationView.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
+        }
         
         return annotationView
     }
@@ -97,6 +103,28 @@ extension LocationViewController: MKMapViewDelegate {
         present(controller, animated: true, completion: nil)
     }
 }
+
+extension LocationViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last, currentLocation.distance(from: location) > kCLLocationAccuracyKilometer {
+            currentLocation = location
+            centerMapOnLocation(location: location)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+        }
+    }
+}
+
+
+// MARK:  SwiftUI
 
 struct SuperLocationViewController: UIViewControllerRepresentable {
     
