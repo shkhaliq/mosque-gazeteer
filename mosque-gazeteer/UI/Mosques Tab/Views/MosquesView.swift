@@ -10,13 +10,7 @@ import SwiftUI
 
 struct MosquesView: View {
     var mosques: [MosqueViewModel]
-    var salahs: [SalahViewModel] = [
-        SalahViewModel(name: "Fajr", time: Date()),
-        SalahViewModel(name: "Zuhr", time: Date()),
-        SalahViewModel(name: "Asr", time: Date()),
-        SalahViewModel(name: "Maghrib", time: Date()),
-        SalahViewModel(name: "Isha", time: Date()),
-    ]
+    var salahs: [SalahViewModel] = SalahViewModel.bmViewModels()
     
     var body: some View {
         List(mosques) { mosque in
