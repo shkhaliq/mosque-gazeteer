@@ -14,7 +14,7 @@ struct MosquesView: View {
     
     var body: some View {
         List(mosques) { mosque in
-            NavigationLink(destination: SalahView(salahs: self.salahs), label: {
+            NavigationLink(destination: SalahView(salahs: self.salahs, mosque: mosque), label: {
                 MosqueView(mosque: mosque)
             })
         }

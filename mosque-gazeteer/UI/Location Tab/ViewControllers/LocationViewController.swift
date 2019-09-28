@@ -92,9 +92,6 @@ extension LocationViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView,
                  annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
-        let salahs: [SalahViewModel] = SalahViewModel.bmViewModels()
-        let controller = UIHostingController(rootView: SalahView(salahs: salahs))
-        present(controller, animated: true, completion: nil)
     }
 }
 

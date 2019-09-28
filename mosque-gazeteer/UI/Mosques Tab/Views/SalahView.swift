@@ -9,16 +9,17 @@
 import SwiftUI
 
 struct SalahView: View {
-    var salahs: [SalahViewModel]
-    
+    let salahs: [SalahViewModel]
+    let mosque: MosqueViewModel
+
     var locations: [LocationViewModel] = [
         LocationViewModel(latitude: 43.693796, longitude: -79.277703, title: "Baitul Mukarram Masjid"),
     ]
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
+            MosqueDetailView(mosque: mosque)
             VStack {
-                SuperLocationViewControllerView(locations: locations)
                 List(salahs) { salah in
                     HStack {
                         Text(salah.name).font(.subheadline)
@@ -26,7 +27,6 @@ struct SalahView: View {
                         Text("\(salah.time, formatter: DateFormatter.localTimeFormat)").font(.headline)
                     }
                 }
-                .listStyle(GroupedListStyle())
             }
         }
     }
