@@ -4,3 +4,4 @@ Pods/
 *report.xml
 fastlane/test_output/*
 
+.DS_Store
