@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0.0, *)
 struct SignInView: View {
     
     @State private var userName: String = ""

@@ -18,9 +18,7 @@ class ApplicationLaunchService: NSObject, ApplicationService {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        if #available(iOS 13.0.0, *) {
-            window?.rootViewController = UIHostingController(rootView: ApplicationTabbedView())
-        }
+        window?.rootViewController = UIHostingController(rootView: ApplicationTabbedView())
         window?.makeKeyAndVisible()
         return true
     }
