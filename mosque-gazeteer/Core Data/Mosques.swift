@@ -20,6 +20,7 @@ struct Mosques {
     
     func load() {
         save(
+            id: 1,
             name: "Baitul Mukarram Masjid",
             phoneNumber: 4166863037,
             address: "3334 Danforth Ave Toronto, ON, M1l 1C6",
@@ -29,6 +30,7 @@ struct Mosques {
         )
 
         save(
+            id: 2,
             name: "Baitul Aman Masjid",
             phoneNumber: 4166863037,
             address: "3334 Danforth Ave Toronto, ON, M1l 1C6",
@@ -39,6 +41,7 @@ struct Mosques {
     }
     //swiftlint:disable:next function_parameter_count
     private func save(
+        id: Int64,
         name: String,
         phoneNumber: Int64,
         address: String,
@@ -52,9 +55,12 @@ struct Mosques {
         mosque.address = address
         mosque.longitude = longitude
         mosque.latitude = latitude
+        mosque.id = id
         
-        let salahs: [Salah] = allSalahs.compactMap { key, value in
+        let salahs: [Salah] = allSalahs.enumerated().compactMap { (index, arg1) in
+            let (key, value) = arg1
             let salah = MosqueDataCoordinator.shared.salah.create()
+            salah?.id = Int64(index)
             salah?.name = key
             salah?.iqamah = value
             return salah

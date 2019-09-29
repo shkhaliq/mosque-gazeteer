@@ -17,9 +17,21 @@ struct SalahViewModel: Identifiable {
 extension SalahViewModel {
     init?(_ salah: Salah) {
         guard let name = salah.name, let iqamah = salah.iqamah else { return nil }
-
+        
         self.name = name
         self.iqamah = iqamah
         self.id = Int(salah.id)
+    }
+}
+
+
+extension Array where Element: Salah {
+    func sortedByIqamah() -> [Salah] {
+        return sorted(by: { salah, salah2 -> Bool in
+            if let iqamah = salah.iqamah, let iqamah2 = salah2.iqamah {
+                return iqamah.compare(iqamah2) == .orderedAscending
+            }
+            return false
+        })
     }
 }

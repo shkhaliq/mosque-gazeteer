@@ -28,6 +28,7 @@ extension MosqueViewModel {
         self.id = Int(mosque.id)
         self.salahs = mosque.salahs?
             .compactMap({ $0 as? Salah })
+            .sortedByIqamah()
             .compactMap({ SalahViewModel($0) }) ?? []
     }
 }
