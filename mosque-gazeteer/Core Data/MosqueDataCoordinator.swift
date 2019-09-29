@@ -32,6 +32,6 @@ class MosqueDataCoordinator {
         })
     }
 
-//    private(set) lazy var menuGroupModel = DataModel<MenuGroup>()
-//    private(set) lazy var menuItem = DataModel<MenuItem>()
+    private(set) lazy var mosque = DataModel<Mosque>()
+    private(set) lazy var salah = DataModel<Salah>()
 }

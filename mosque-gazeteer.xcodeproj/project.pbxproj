@@ -14,10 +14,6 @@
 		FE5564D42340687C00AEFB0E /* MosqueDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE5564D22340687C00AEFB0E /* MosqueDataModel.xcdatamodeld */; };
 		FE5564D723406B3E00AEFB0E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5564D623406B3E00AEFB0E /* DataModel.swift */; };
 		FE5564D923406B8100AEFB0E /* MosqueDataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5564D823406B8100AEFB0E /* MosqueDataCoordinator.swift */; };
-		FE5564F2234070CB00AEFB0E /* Salahs+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5564EE234070CB00AEFB0E /* Salahs+CoreDataClass.swift */; };
-		FE5564F3234070CB00AEFB0E /* Mosques+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5564F0234070CB00AEFB0E /* Mosques+CoreDataClass.swift */; };
-		FE5564F4234070CB00AEFB0E /* Salahs+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5564EF234070CB00AEFB0E /* Salahs+CoreDataProperties.swift */; };
-		FE5564F5234070CB00AEFB0E /* Mosques+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5564F1234070CB00AEFB0E /* Mosques+CoreDataProperties.swift */; };
 		FE899BD62207AEDA004F0996 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE899BD52207AEDA004F0996 /* LocationViewController.swift */; };
 		FE899BD82207C8EE004F0996 /* DateFormatter+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE899BD72207C8EE004F0996 /* DateFormatter+Custom.swift */; };
 		FEAF84CE220006C8002E49DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF84CD220006C8002E49DA /* AppDelegate.swift */; };
@@ -62,10 +58,6 @@
 		FE5564D32340687C00AEFB0E /* MosqueDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MosqueDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FE5564D623406B3E00AEFB0E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		FE5564D823406B8100AEFB0E /* MosqueDataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueDataCoordinator.swift; sourceTree = "<group>"; };
-		FE5564EE234070CB00AEFB0E /* Salahs+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Salahs+CoreDataClass.swift"; path = "/Users/hkhaliq/personal-repos/mosque-gazeteer/mosque-gazeteer/Core Data/Salahs+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		FE5564EF234070CB00AEFB0E /* Salahs+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Salahs+CoreDataProperties.swift"; path = "/Users/hkhaliq/personal-repos/mosque-gazeteer/mosque-gazeteer/Core Data/Salahs+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		FE5564F0234070CB00AEFB0E /* Mosques+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Mosques+CoreDataClass.swift"; path = "/Users/hkhaliq/personal-repos/mosque-gazeteer/mosque-gazeteer/Core Data/Mosques+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		FE5564F1234070CB00AEFB0E /* Mosques+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Mosques+CoreDataProperties.swift"; path = "/Users/hkhaliq/personal-repos/mosque-gazeteer/mosque-gazeteer/Core Data/Mosques+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		FE899BD52207AEDA004F0996 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		FE899BD72207C8EE004F0996 /* DateFormatter+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Custom.swift"; sourceTree = "<group>"; };
 		FEAF84CA220006C8002E49DA /* mosque-gazeteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mosque-gazeteer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,10 +127,6 @@
 		FE5564D523406B2C00AEFB0E /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				FE5564EE234070CB00AEFB0E /* Salahs+CoreDataClass.swift */,
-				FE5564EF234070CB00AEFB0E /* Salahs+CoreDataProperties.swift */,
-				FE5564F0234070CB00AEFB0E /* Mosques+CoreDataClass.swift */,
-				FE5564F1234070CB00AEFB0E /* Mosques+CoreDataProperties.swift */,
 				FE5564D623406B3E00AEFB0E /* DataModel.swift */,
 				FE5564D823406B8100AEFB0E /* MosqueDataCoordinator.swift */,
 			);
@@ -512,13 +500,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE5564F2234070CB00AEFB0E /* Salahs+CoreDataClass.swift in Sources */,
 				FEAF85102202A746002E49DA /* ApplicationLaunchService.swift in Sources */,
 				FE5564D42340687C00AEFB0E /* MosqueDataModel.xcdatamodeld in Sources */,
 				FE899BD62207AEDA004F0996 /* LocationViewController.swift in Sources */,
 				FEAF85042201EE2C002E49DA /* MosqueViewModel.swift in Sources */,
-				FE5564F3234070CB00AEFB0E /* Mosques+CoreDataClass.swift in Sources */,
-				FE5564F5234070CB00AEFB0E /* Mosques+CoreDataProperties.swift in Sources */,
 				FE899BD82207C8EE004F0996 /* DateFormatter+Custom.swift in Sources */,
 				FECF470A220AB18800DA3948 /* MosqueDataClient.swift in Sources */,
 				FEF50DBF220D48DB00229C4B /* SalahViewModel.swift in Sources */,
@@ -530,7 +515,6 @@
 				FE5564CE234012C100AEFB0E /* MosqueDetailView.swift in Sources */,
 				FE3764612336A44D005436CA /* SignInView.swift in Sources */,
 				FEF50DC7220D4AC100229C4B /* Endpoint.swift in Sources */,
-				FE5564F4234070CB00AEFB0E /* Salahs+CoreDataProperties.swift in Sources */,
 				FE5564D723406B3E00AEFB0E /* DataModel.swift in Sources */,
 				FEAF850922029F38002E49DA /* UITableView+Register.swift in Sources */,
 				FEAF84F8220015B2002E49DA /* Mosque.swift in Sources */,

@@ -23,11 +23,11 @@ class SalahViewModel: Equatable {
     }
 }
 
-extension SalahViewModel {
-    convenience init(_ salah: Salah) {
-        self.init(name: salah.name, time: salah.iqamah)
-    }
-}
+//extension SalahViewModel {
+//    convenience init(_ salah: Salah) {
+//        self.init(name: salah.name, time: salah.iqamah)
+//    }
+//}
 
 extension SalahViewModel: Identifiable {}
 

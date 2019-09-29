@@ -25,10 +25,10 @@ class MosqueViewModel: Equatable {
     }
 }
 
-extension MosqueViewModel {
-    convenience init(_ mosque: Mosque) {
-        self.init(id: mosque.id, name: mosque.name, address: "")
-    }
-}
+//extension MosqueViewModel {
+//    convenience init(_ mosque: Mosque) {
+//        self.init(id: mosque.id, name: mosque.name, address: "")
+//    }
+//}
 
 extension MosqueViewModel: Identifiable {}
