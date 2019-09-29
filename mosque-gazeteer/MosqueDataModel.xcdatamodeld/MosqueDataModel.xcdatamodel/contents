@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Mosques" representedClassName="Mosques" syncable="YES" codeGenerationType="class">
+        <attribute name="address" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="webUrl" optional="YES" attributeType="URI"/>
+    </entity>
+    <entity name="Salahs" representedClassName="Salahs" syncable="YES" codeGenerationType="class">
+        <attribute name="adhan" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="begins" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="iqamah" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Mosques" positionX="-286.73046875" positionY="-37.4140625" width="128" height="103"/>
+        <element name="Salahs" positionX="-54" positionY="18" width="128" height="103"/>
+    </elements>
+</model>
