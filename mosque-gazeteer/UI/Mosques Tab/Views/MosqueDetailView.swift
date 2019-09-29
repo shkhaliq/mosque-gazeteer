@@ -23,9 +23,9 @@ struct MosqueDetailView: View {
             Button("416-779-9753") {
                 let tel = "tel://"
                 let formattedString = tel + "4167799753"
-                let url = URL(string: formattedString)! as NSURL
-
-                UIApplication.shared.open(url as URL)
+                if let url = URL(string: formattedString) {
+                    UIApplication.shared.open(url as URL)
+                }
             }
             .foregroundColor(.blue)
         }
