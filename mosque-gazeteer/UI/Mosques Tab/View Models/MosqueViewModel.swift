@@ -12,7 +12,7 @@ struct MosqueViewModel: Identifiable {
     
     let name: String
     let address: String
-    let id: URL
+    let id: Int
     let salahs: [SalahViewModel]
 }
 
@@ -25,7 +25,7 @@ extension MosqueViewModel {
         }
         self.name = name
         self.address = address
-        self.id = mosque.objectID.uriRepresentation()
+        self.id = Int(mosque.id)
         self.salahs = mosque.salahs?
             .compactMap({ $0 as? Salah })
             .compactMap({ SalahViewModel($0) }) ?? []

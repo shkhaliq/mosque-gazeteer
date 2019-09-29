@@ -9,7 +9,7 @@
 import Foundation
 
 struct SalahViewModel: Identifiable {
-    let id: URL
+    let id: Int
     let name: String
     let iqamah: Date
 }
@@ -20,6 +20,6 @@ extension SalahViewModel {
 
         self.name = name
         self.iqamah = iqamah
-        self.id = salah.objectID.uriRepresentation()
+        self.id = Int(salah.id)
     }
 }
