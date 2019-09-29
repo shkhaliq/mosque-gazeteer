@@ -12,11 +12,8 @@ struct MosqueView: View {
     var mosque: MosqueViewModel
     
     var body: some View {
-        VStack {
-            Text(mosque.name)
-            Text(mosque.address)
-                .font(.subheadline)
-        }
-        .padding()
+        Text(mosque.name)
+            .fontWeight(.medium)
+            .padding()
     }
 }

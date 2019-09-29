@@ -92,15 +92,6 @@ extension LocationViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView,
                  annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
-        let salahs: [SalahViewModel] = [
-            SalahViewModel(name: "Fajr", time: Date()),
-            SalahViewModel(name: "Zuhr", time: Date()),
-            SalahViewModel(name: "Asr", time: Date()),
-            SalahViewModel(name: "Maghrib", time: Date()),
-            SalahViewModel(name: "Isha", time: Date()),
-        ]
-        let controller = UIHostingController(rootView: SalahView(salahs: salahs))
-        present(controller, animated: true, completion: nil)
     }
 }
 
@@ -123,8 +114,6 @@ extension LocationViewController: CLLocationManagerDelegate {
     }
 }
 
-
-// MARK:  SwiftUI
 
 struct SuperLocationViewController: UIViewControllerRepresentable {
     
