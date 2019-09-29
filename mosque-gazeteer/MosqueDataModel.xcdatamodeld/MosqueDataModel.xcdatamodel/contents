@@ -2,6 +2,8 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Mosque" representedClassName="Mosque" syncable="YES" codeGenerationType="class">
         <attribute name="address" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="webUrl" optional="YES" attributeType="URI"/>
@@ -15,7 +17,7 @@
         <relationship name="mosque" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mosque" inverseName="salahs" inverseEntity="Mosque"/>
     </entity>
     <elements>
-        <element name="Mosque" positionX="-286.73046875" positionY="-37.4140625" width="128" height="118"/>
+        <element name="Mosque" positionX="-286.73046875" positionY="-37.4140625" width="128" height="148"/>
         <element name="Salah" positionX="-54" positionY="18" width="128" height="118"/>
     </elements>
 </model>

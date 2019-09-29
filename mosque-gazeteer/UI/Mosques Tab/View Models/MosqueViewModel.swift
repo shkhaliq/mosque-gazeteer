@@ -8,27 +8,26 @@
 
 import Foundation
 
-class MosqueViewModel: Equatable {
-
+struct MosqueViewModel: Identifiable {
+    
     let name: String
     let address: String
-    let id: Int
-
-    init(id: Int, name: String, address: String) {
-        self.id = id
-        self.name = name
-        self.address = address
-    }
-
-    static func == (lhs: MosqueViewModel, rhs: MosqueViewModel) -> Bool {
-        return lhs.id == rhs.id && lhs.name == rhs.name && lhs.address == rhs.address
-    }
+    let id: URL
+    let salahs: [SalahViewModel]
 }
 
-//extension MosqueViewModel {
-//    convenience init(_ mosque: Mosque) {
-//        self.init(id: mosque.id, name: mosque.name, address: "")
-//    }
-//}
-
-extension MosqueViewModel: Identifiable {}
+extension MosqueViewModel {
+    init?(_ mosque: Mosque) {
+        guard let name = mosque.name,
+            let address = mosque.address
+            else {
+                return nil
+        }
+        self.name = name
+        self.address = address
+        self.id = mosque.objectID.uriRepresentation()
+        self.salahs = mosque.salahs?
+            .compactMap({ $0 as? Salah })
+            .compactMap({ SalahViewModel($0) }) ?? []
+    }
+}

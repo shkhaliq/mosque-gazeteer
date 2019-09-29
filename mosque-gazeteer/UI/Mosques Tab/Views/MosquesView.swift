@@ -10,11 +10,10 @@ import SwiftUI
 
 struct MosquesView: View {
     var mosques: [MosqueViewModel]
-    var salahs: [SalahViewModel] = SalahViewModel.bmViewModels()
     
     var body: some View {
         List(mosques) { mosque in
-            NavigationLink(destination: SalahView(salahs: self.salahs, mosque: mosque), label: {
+            NavigationLink(destination: SalahView(mosque: mosque), label: {
                 MosqueView(mosque: mosque)
             })
         }

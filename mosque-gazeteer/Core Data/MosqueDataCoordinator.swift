@@ -20,11 +20,11 @@ class MosqueDataCoordinator {
             return coordinator
         }
         coordinator = MosqueDataCoordinator()
-        return coordinator!
+        return coordinator! //swiftlint:disable:this force_unwrapping
     }
 
     private init() {
-        container = NSPersistentContainer(name: "MosqueDataCoordinator")
+        container = NSPersistentContainer(name: "MosqueDataModel")
         container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
