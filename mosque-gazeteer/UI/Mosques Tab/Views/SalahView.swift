@@ -11,7 +11,7 @@ import SwiftUI
 struct SalahView: View {
     let salahs: [SalahViewModel]
     let mosque: MosqueViewModel
-
+    
     var locations: [LocationViewModel] = [
         LocationViewModel(latitude: 43.693796, longitude: -79.277703, title: "Baitul Mukarram Masjid"),
     ]
@@ -19,13 +19,12 @@ struct SalahView: View {
     var body: some View {
         VStack {
             MosqueDetailView(mosque: mosque)
-            VStack {
-                List(salahs) { salah in
-                    HStack {
-                        Text(salah.name).font(.subheadline)
-                        Spacer()
-                        Text("\(salah.time, formatter: DateFormatter.localTimeFormat)").font(.headline)
-                    }
+            List(salahs) { salah in
+                HStack {
+                    Text(salah.name).font(.subheadline)
+                    Spacer()
+                    Text("\(salah.time, formatter: DateFormatter.localTimeFormat)")
+                        .font(.headline)
                 }
             }
         }

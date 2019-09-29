@@ -19,6 +19,7 @@ struct MosqueDetailView: View {
                 
             }
             .font(.subheadline)
+            .foregroundColor(.blue)
             Button("416-779-9753") {
                 let tel = "tel://"
                 let formattedString = tel + "4167799753"
@@ -26,6 +27,7 @@ struct MosqueDetailView: View {
 
                 UIApplication.shared.open(url as URL)
             }
+            .foregroundColor(.blue)
         }
     }
 }
