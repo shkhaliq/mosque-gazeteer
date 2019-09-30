@@ -15,13 +15,22 @@ struct SalahView: View {
         VStack {
             MosqueDetailView(mosque: mosque)
             List(mosque.salahs) { salah in
-                HStack {
-                    Text(salah.name).font(.subheadline)
-                    Spacer()
-                    Text("\(salah.iqamah, formatter: DateFormatter.localTimeFormat)")
-                        .font(.headline)
-                }
+                SalahItemView(salah: salah)
             }
+        }
+    }
+}
+
+struct SalahItemView: View {
+    
+    let salah: SalahViewModel
+    
+    var body: some View {
+        HStack {
+            Text(salah.name).font(.subheadline)
+            Spacer()
+            Text("\(salah.iqamah, formatter: DateFormatter.localTimeFormat)")
+                .font(.headline)
         }
     }
 }
