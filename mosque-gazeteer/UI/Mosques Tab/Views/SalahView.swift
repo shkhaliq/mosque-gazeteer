@@ -16,7 +16,7 @@ struct SalahView: View {
             MosqueDetailView(mosque: mosque)
             List(mosque.salahs) { salah in
                 SalahItemView(salah: salah)
-            }
+            }.navigationBarTitle(mosque.name)
         }
     }
 }
@@ -27,10 +27,10 @@ struct SalahItemView: View {
     
     var body: some View {
         HStack {
-            Text(salah.name).font(.subheadline)
+            Text(salah.name).font(.body)
             Spacer()
             Text("\(salah.iqamah, formatter: DateFormatter.localTimeFormat)")
-                .font(.headline)
+                .font(.largeTitle)
         }
     }
 }

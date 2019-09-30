@@ -19,3 +19,13 @@ struct MosquesView: View {
         }
     }
 }
+
+struct MosqueView: View {
+    var mosque: MosqueViewModel
+    
+    var body: some View {
+        Text(mosque.name)
+            .fontWeight(.medium)
+            .padding()
+    }
+}

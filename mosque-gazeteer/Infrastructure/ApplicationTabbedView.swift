@@ -24,7 +24,6 @@ struct ApplicationTabbedView: View {
             NavigationView {
                 MosquesView(mosques: mosques)
                     .navigationBarTitle(Text("Mosques"))
-                    .navigationBarItems(trailing: Image(systemName: "plus.circle"))
             }
             .tabItem {
                 Image(systemName: "moon")

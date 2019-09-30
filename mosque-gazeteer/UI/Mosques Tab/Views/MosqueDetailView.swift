@@ -14,7 +14,6 @@ struct MosqueDetailView: View {
     
     var body: some View {
         return VStack {
-            Text(mosque.name).font(.headline)
             Button(mosque.address) {
                 
             }
