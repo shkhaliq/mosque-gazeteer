@@ -15,12 +15,6 @@ struct ApplicationTabbedView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            SuperLocationViewControllerView(locations: [])
-                .tabItem {
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Location")
-            }
-            .tag(1)
             NavigationView {
                 MosquesView(mosques: mosques)
                     .navigationBarTitle(Text("Mosques"))
@@ -28,6 +22,12 @@ struct ApplicationTabbedView: View {
             .tabItem {
                 Image(systemName: "moon")
                 Text("Salah")
+            }
+            .tag(1)
+            SuperLocationViewControllerView(locations: [])
+                .tabItem {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text("Location")
             }
             .tag(2)
             NavigationView {

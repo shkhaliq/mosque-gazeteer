@@ -16,7 +16,10 @@ struct SalahView: View {
             MosqueDetailView(mosque: mosque)
             List(mosque.salahs) { salah in
                 SalahItemView(salah: salah)
-            }.navigationBarTitle(mosque.name)
+            }
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle(mosque.name)
+            .navigationBarItems(trailing: Image(systemName: "pencil"))
         }
     }
 }
@@ -31,6 +34,7 @@ struct SalahItemView: View {
             Spacer()
             Text("\(salah.iqamah, formatter: DateFormatter.localTimeFormat)")
                 .font(.largeTitle)
+                .listRowBackground(Color.green)
         }
     }
 }
