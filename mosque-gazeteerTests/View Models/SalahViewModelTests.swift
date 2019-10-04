@@ -13,8 +13,9 @@ import XCTest
 class SalahViewModelTests: XCTestCase {
 
     func testSimpleViewModel() {
-        let salahViewModel = SalahViewModel(name: "Fajr", time: Date.distantFuture)
-        XCTAssert(salahViewModel.name == "Fajr")
-        XCTAssert(salahViewModel.time == Date.distantFuture)
+        let salahViewModel = SalahViewModel(id: 0, name: "Fajr", iqamah: Date.distantFuture)
+        XCTAssertEqual(salahViewModel.name, "Fajr")
+        XCTAssertEqual(salahViewModel.id, 0)
+        XCTAssertEqual(salahViewModel.iqamah, Date.distantFuture)
     }
 }

@@ -34,7 +34,6 @@
 		FEF50DBF220D48DB00229C4B /* SalahViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DBE220D48DB00229C4B /* SalahViewModel.swift */; };
 		FEF50DC2220D490400229C4B /* SalahViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DC1220D490400229C4B /* SalahViewModelTests.swift */; };
 		FEF50DC7220D4AC100229C4B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DC6220D4AC100229C4B /* Endpoint.swift */; };
-		FEF50DCA220D4B8200229C4B /* MockMosqueDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF50DC9220D4B8200229C4B /* MockMosqueDataClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +82,6 @@
 		FEF50DBE220D48DB00229C4B /* SalahViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalahViewModel.swift; sourceTree = "<group>"; };
 		FEF50DC1220D490400229C4B /* SalahViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalahViewModelTests.swift; sourceTree = "<group>"; };
 		FEF50DC6220D4AC100229C4B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		FEF50DC9220D4B8200229C4B /* MockMosqueDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMosqueDataClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,7 +293,6 @@
 		FEF50DC8220D4B7500229C4B /* Test Support */ = {
 			isa = PBXGroup;
 			children = (
-				FEF50DC9220D4B8200229C4B /* MockMosqueDataClient.swift */,
 			);
 			path = "Test Support";
 			sourceTree = "<group>";
@@ -531,7 +528,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEF50DCA220D4B8200229C4B /* MockMosqueDataClient.swift in Sources */,
 				FEF50DC2220D490400229C4B /* SalahViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
