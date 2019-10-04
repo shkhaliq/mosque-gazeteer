@@ -9,24 +9,32 @@
 import SwiftUI
 
 struct SalahView: View {
-    let salahs: [SalahViewModel]
     let mosque: MosqueViewModel
-    
-    var locations: [LocationViewModel] = [
-        LocationViewModel(latitude: 43.693796, longitude: -79.277703, title: "Baitul Mukarram Masjid"),
-    ]
     
     var body: some View {
         VStack {
             MosqueDetailView(mosque: mosque)
-            List(salahs) { salah in
-                HStack {
-                    Text(salah.name).font(.subheadline)
-                    Spacer()
-                    Text("\(salah.time, formatter: DateFormatter.localTimeFormat)")
-                        .font(.headline)
-                }
+            List(mosque.salahs) { salah in
+                SalahItemView(salah: salah)
             }
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle(mosque.name)
+            .navigationBarItems(trailing: Image(systemName: "pencil"))
+        }
+    }
+}
+
+struct SalahItemView: View {
+    
+    let salah: SalahViewModel
+    
+    var body: some View {
+        HStack {
+            Text(salah.name).font(.body)
+            Spacer()
+            Text("\(salah.iqamah, formatter: DateFormatter.localTimeFormat)")
+                .font(.largeTitle)
+                .listRowBackground(Color.green)
         }
     }
 }
