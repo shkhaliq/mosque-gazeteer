@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE1388792346F14D008351C2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FE1388782346F14D008351C2 /* SwiftPackageProductDependency */; };
 		FE3764612336A44D005436CA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3764602336A44D005436CA /* SignInView.swift */; };
 		FE5564CE234012C100AEFB0E /* MosqueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5564CD234012C100AEFB0E /* MosqueDetailView.swift */; };
 		FE5564D42340687C00AEFB0E /* MosqueDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE5564D22340687C00AEFB0E /* MosqueDataModel.xcdatamodeld */; };
@@ -89,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1388792346F14D008351C2 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +317,6 @@
 			);
 			name = "mosque-gazeteerTests";
 			packageProductDependencies = (
-				FE1388782346F14D008351C2 /* SwiftPackageProductDependency */,
 			);
 			productName = "mosque-gazeteerTests";
 			productReference = FEAF84DE220006CA002E49DA /* mosque-gazeteerTests.xctest */;
@@ -355,7 +352,6 @@
 			);
 			mainGroup = FEAF84C1220006C8002E49DA;
 			packageReferences = (
-				FE1388772346F14D008351C2 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = FEAF84CB220006C8002E49DA /* Products */;
 			projectDirPath = "";
@@ -403,7 +399,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -699,25 +696,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		FE1388772346F14D008351C2 /* RemoteSwiftPackageReference */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.6.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		FE1388782346F14D008351C2 /* SwiftPackageProductDependency */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FE1388772346F14D008351C2 /* RemoteSwiftPackageReference */;
-			productName = SnapshotTesting;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FE5564D22340687C00AEFB0E /* MosqueDataModel.xcdatamodeld */ = {
