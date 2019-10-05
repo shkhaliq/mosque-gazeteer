@@ -2,7 +2,6 @@ osx_image: xcode11
 language: swift
 cache:
   bundler: true
-  cocoapods: true
 xcode_workspace: mosque-gazeteer.xcworkspace
 
 xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone 11
@@ -10,7 +9,6 @@ xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone 11
 before_install:
   - gem install -v 2.0.2 bundler --no-document
   - bundle _2.0.2_ install
-  - pod repo update
 
 script:
   - bundle exec fastlane pr_build
